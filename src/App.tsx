@@ -1,12 +1,16 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Product from './pages/Product';
+import Cart from './pages/Cart';
 import Homepage from './pages/Homepage';
 import Counter from './pages/Counter';
 import { store } from './store/store';
 import { Provider } from 'react-redux';
+import SuccessfulPayment from './pages/SuccessfulPayment';
+import FailedPayment from './pages/FailedPayment';
+import Checkout from './pages/Checkout';
+
 
 
 function App() {
@@ -16,9 +20,13 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Homepage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/payment" element={<SuccessfulPayment />} />
+        <Route path="/failedpayment" element={<FailedPayment />} />
+        <Route path="/checkout" element={<Checkout />} />
+
 
 
       </Routes>

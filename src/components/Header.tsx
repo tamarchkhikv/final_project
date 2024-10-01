@@ -3,7 +3,7 @@ import DropDown from "./DropDown";
 
 const Header = () => {
     return (
-        <div className="flex items-center justify-between max-w-[1116px] mx-auto mt-3">
+        <div className="flex items-center justify-between max-w-[1116px] mx-auto  border-b-[1px] py-5">
             <div className="flex items-center gap-2">
                 <img src="/images/logomark.png" />
                 <h2 className="font-extrabold text-xl text-[#0E1422]">Ecommerce</h2>
