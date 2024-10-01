@@ -10,6 +10,10 @@ import { Provider } from 'react-redux';
 import SuccessfulPayment from './pages/SuccessfulPayment';
 import FailedPayment from './pages/FailedPayment';
 import Checkout from './pages/Checkout';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 
 
 
@@ -26,6 +30,11 @@ function App() {
         <Route path="/payment" element={<SuccessfulPayment />} />
         <Route path="/failedpayment" element={<FailedPayment />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/forgotpassword" element={<ForgotPassword/>} />
+        <Route path="/resetpassword" element={<ResetPassword />} />
+
 
 
 
