@@ -63,7 +63,7 @@ const ProductPageSectionTwo = () => {
                                         <h2 className="font-bold text-[32px] text-[#0E1422]">4.2</h2>
                                         <h5 className="font-normal text-sm text-[#71747E]">— 54 Reviews</h5>
                                     </div>
-                                    <a href="/">
+                                    <a href="/writereviw">
                                         <button className=" mt-10 w-36 h-11 border-[1px] rounded-[4px]">Write a review</button>
                                     </a>
                                     <div className="flex items-center justify-end">
