@@ -17,6 +17,7 @@ import ResetPassword from './pages/ResetPassword';
 
 
 
+
 function App() {
   return (
     <Provider store={store}>
@@ -34,6 +35,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgotpassword" element={<ForgotPassword/>} />
         <Route path="/resetpassword" element={<ResetPassword />} />
+      
+        
 
 
 

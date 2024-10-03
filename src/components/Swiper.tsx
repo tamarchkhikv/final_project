@@ -6,17 +6,20 @@ import { Pagination } from 'swiper/modules';
 
 const SwiperComponent: React.FC = () => {
   return (
-    <MySwiper
-      pagination={{ clickable: true }}
-      modules={[Pagination]}
-      className="h-full w-full"
-    >
-      {Array.from({ length: 2 }, (_, index) => (
-        <SwiperSlide key={index} className="flex justify-center items-center bg-white text-lg">
-          Slide {index + 1}
-        </SwiperSlide>
-      ))}
-    </MySwiper>
+    
+      <MySwiper
+        pagination={{ clickable: true }}
+        modules={[Pagination]}
+        className="h-[574px] w-[534px] bg-[#F6F6F6] "
+      >
+        {Array.from({ length: 4 }, (_, index) => (
+          <SwiperSlide key={index} className="flex ">
+            <img src="/images/product-image.png" className='w-[288px] h-[404px]' />
+            {/* {index + 1} */}
+          </SwiperSlide>
+        ))}
+      </MySwiper>
+    
   );
 };
 
