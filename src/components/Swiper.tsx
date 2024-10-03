@@ -15,7 +15,7 @@ const SwiperComponent: React.FC = () => {
         {Array.from({ length: 4 }, (_, index) => (
           <SwiperSlide key={index} className="flex ">
             <img src="/images/product-image.png" className='w-[288px] h-[404px]' />
-            {/* {index + 1} */}
+            
           </SwiperSlide>
         ))}
       </MySwiper>

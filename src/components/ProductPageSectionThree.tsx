@@ -29,15 +29,15 @@ const products = [
 
 const ProductPageSectionThree = () => {
     return (
-        <div className=" flex mx-auto max-w-[1092px] py-4-">
+        <div className=" flex mx-auto max-w-[1092px] py-4 pb-[136px]">
             <div>
                 <h1 className="font-bold text-2xl text-[#0E1422]">You might also like</h1>
-                <h4 className="font-medium text-[12px] text-[#878A92]">SIMILAR PRODUCTS</h4>
+                <h4 className="font-medium text-[12px] text-[#878A92] mt-2">SIMILAR PRODUCTS</h4>
 
-                <div className="grid grid-rows-1 grid-flow-col mx-auto max-w-[1092px] gap-4 mt-14">
+                <div className="grid grid-rows-1 grid-flow-col mx-auto max-w-[1092px] gap-10 mt-14 ">
                     {products.map((product, index) => (
                         <div key={index}>
-                            <div className="w-60 h-80 bg-neutral-100 rounded">
+                            <div className="w-60 h-80 bg-neutral-100 rounded ">
                                 <img src={product.img} />
                             </div>
                             <div>
