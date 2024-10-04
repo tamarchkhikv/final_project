@@ -35,7 +35,7 @@ const CartSectionTwo = () => {
 
 
                         <div className="flex items-center mt-10">
-                            <img src='/images/cartimage1.png' />
+                            <img src='/images/cartimage2.png' />
                             <div className="ml-8 mt-2">
                                 <h2 className="font-medium text-sm text-[#0E1422]">Essential Neutrals</h2>
                                 <div className="flex items-center gap-[6px] mt-[6px]">

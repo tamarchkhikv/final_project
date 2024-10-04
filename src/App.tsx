@@ -15,6 +15,7 @@ import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import WriteReviw from './pages/WriteReviw';
+import Profile from './pages/Profile';
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword/>} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/writereviw" element={<WriteReviw />} />
+        <Route path="/profile" element={<Profile/>} />
         
       
         
