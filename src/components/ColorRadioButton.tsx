@@ -13,14 +13,14 @@ const ColorRadioButton = () => {
                 defaultValue="warning"
                 sx={{ gap: 2, flexWrap: 'wrap', flexDirection: 'row' }}
             >
-                {(['primary', 'danger', 'success',] as const).map(
+                {(['primary', 'danger', 'success' ,] as const).map(
                     (color) => (
                         <Sheet
                             key={color}
                             sx={{
                                 position: 'relative',
-                                width: 40,
-                                height: 40,
+                                width: 32,
+                                height: 32,
                                 flexShrink: 0,
                                 bgcolor: `${color}.solidBg`,
                                 borderRadius: '50%',

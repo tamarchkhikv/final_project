@@ -14,7 +14,7 @@ const MuiBreadcrumbs = () => {
           separator={<NavigateNextIcon fontSize='small' />}
 
         >
-          {/* <Link underline='none' href='#' color='text.secondary'>Ecommerce</Link> */}
+          <Link underline='none' href='#' color='text.secondary'>Ecommerce</Link>
 
           <Typography color='text.primary' fontWeight='Medium'>Black man t-shirt</Typography>
         </Breadcrumbs>

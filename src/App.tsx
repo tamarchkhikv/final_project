@@ -17,7 +17,9 @@ import ResetPassword from './pages/ResetPassword';
 import WriteReviw from './pages/WriteReviw';
 import Profile from './pages/Profile';
 import AdminLogin from './pages/AdminLogin';
-import AdminPage from './pages/AdminPage';
+
+
+
 
 
 
@@ -42,7 +44,8 @@ function App() {
         <Route path="/writereviw" element={<WriteReviw />} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/adminlogin" element={<AdminLogin/>} />
-        <Route path="/adminpage" element={<AdminPage/>} />
+       
+       
 
         
       
