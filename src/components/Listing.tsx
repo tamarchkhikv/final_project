@@ -60,8 +60,33 @@ const Listing = () => {
         },
     ];
     return (
-        <div className="w-[824px] ml-[35px]">
+        <div className="w-[824px] ml-10">
             <h2 className="font-medium text-sm text-[#0E1422]">Applied Filters:</h2>
+            <div className="flex gap-3 mt-3">
+                <div className="flex items-center  justify-center gap-2 w-[111px] h-9 border-[1px] rounded-[100px] ">
+                    <h3 className="font-medium text-[12px] text-[#0E1422]">Perfume</h3>
+                    <button>
+                        <img src='/images/x.svg'/>
+                    </button>
+                </div>
+                <div className="flex items-center  justify-center gap-2 w-[111px] h-9 border-[1px] rounded-[100px]">
+                    <h3 className="font-medium text-[12px] text-[#0E1422]">Size: M</h3>
+                    <button>
+                        <img src='/images/x.svg'/>
+                    </button>
+                </div>
+            </div>
+
+            <div className="mt-6 flex items-center justify-between">
+                <h3 className="font-medium text-[12px] text-[#5C5F6A]">Showing 1-9 of 36 results.</h3>
+                <div className="flex gap-[6px] items-center">
+                    <h3 className="font-medium text-[12px] text-[#5C5F6A]">SORT BY</h3>
+                    <button>
+                        <img src='/images/down.svg'/>
+                    </button>
+                </div>
+
+            </div>
         
 
             <div className="grid grid-rows-3 grid-flow-col gap-10  mt-4">

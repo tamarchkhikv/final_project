@@ -3,6 +3,7 @@ import Box from '@mui/joy/Box';
 import Radio, { radioClasses } from '@mui/joy/Radio';
 import RadioGroup from '@mui/joy/RadioGroup';
 import Sheet from '@mui/joy/Sheet';
+import MinimumDistanceSlider from "./RangeSlider";
 
 const Categories = () => {
 
@@ -141,6 +142,7 @@ const Categories = () => {
 
                 <div className="mt-10"></div>
                 <h2 className="font-medium text-sm text-[#0E1422]">Price</h2>
+                <MinimumDistanceSlider/>
                 
             </div>
         
