@@ -11,7 +11,9 @@ const PaymentSectionTwo = () => {
                     placed and is now being processed.</p>
 
                 <div className="mt-[48px] mx-auto bg-[#0E1422] w-[196px] h-[44px] flex items-center text-white px-6 text-sm gap-[6px] rounded-md">
+                    <a href='profile'>
                     <button>Go to my account</button>
+                    </a>
                     <img src='/images/arrow-right.png' className="w-6 h-6" />
                 </div>
             </div>

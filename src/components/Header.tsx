@@ -4,18 +4,18 @@ import DropDown from "./DropDown";
 const Header = () => {
     return (
         <div className="flex items-center justify-between max-w-[1116px] mx-auto  border-b-[1px] py-5">
-            <div className="flex items-center gap-2">
+            <a className="flex items-center gap-2" href='/'>
                 <img src="/images/logomark.png" />
                 <h2 className="font-extrabold text-xl text-[#0E1422]">Ecommerce</h2>
-            </div>
+            </a>
 
             <nav className="flex gap-8 ">
                 <a href='/' className="font-medium text-sm text-[#5C5F6A]">Home</a>
-                <DropDown/>
+                <DropDown />
 
 
-                <a href='/' className="font-medium text-sm text-[#5C5F6A]">About</a>
-                <a href='/' className="font-medium text-sm text-[#5C5F6A]">Contact</a>
+                <a href='listing' className="font-medium text-sm text-[#5C5F6A]">Listing</a>
+                <a href='product' className="font-medium text-sm text-[#5C5F6A]">Product</a>
             </nav>
             <div className="flex items-center gap-8">
                 <div className="flex border-[1px] border-[#E6E7E8] gap-2 px-[15px] py-[10px] rounded-md">
@@ -23,8 +23,12 @@ const Header = () => {
                     <input type='text' placeholder="Search products"></input>
                 </div>
                 <div className="flex gap-8">
-                    <img src='/images/icon.png'className="w-[24px] h-[24px]" />
-                    <img src='/images/user.png'className="w-[26px] h-[26px]" />
+                    <a href='cart'>
+                        <img src='/images/icon.png' className="w-[24px] h-[24px]" />
+                    </a>
+                    <a href='profile'>
+                        <img src='/images/user.png' className="w-[26px] h-[26px]" />
+                    </a>
                 </div>
             </div>
 

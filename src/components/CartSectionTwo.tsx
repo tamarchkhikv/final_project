@@ -27,10 +27,10 @@ const CartSectionTwo = () => {
 
                             </div>
                             <h3 className="ml-[106px] text-sm text-[#0E1422] font-medium">$75.00</h3>
-                            <Counter/>
-                            <img src='/images/remove.png'className="ml-4"/>
-                        
-                        
+                            <Counter />
+                            <img src='/images/remove.png' className="ml-4" />
+
+
                         </div>
 
 
@@ -51,8 +51,8 @@ const CartSectionTwo = () => {
                                 </div>
                             </div>
                             <h3 className="ml-[152px] text-sm text-[#0E1422] font-medium">$22.00</h3>
-                            <Counter/>
-                            <img src='/images/remove.png'className="ml-4"/>
+                            <Counter />
+                            <img src='/images/remove.png' className="ml-4" />
                         </div>
                     </div>
 
@@ -81,10 +81,11 @@ const CartSectionTwo = () => {
                     <h4 className="font-medium text-sm text-[#0E1422]">Total</h4>
                     <span className="font-medium text-sm text-[#0E1422]">$ 100.00</span>
                 </div>
-
-                <button className="w-[296px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8">Checkout</button>
+                <a href='checkout'>
+                    <button className="w-[296px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8">Checkout</button>
+                </a>
                 <div className="text-center mt-8 font-medium text-[12px] underline underline-offset-4 text-[#0E1422]">
-                    <a href="#">Continue Shopping</a>
+                    <a href="listing">Continue Shopping</a>
                 </div>
 
 

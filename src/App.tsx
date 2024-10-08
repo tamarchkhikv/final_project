@@ -16,8 +16,9 @@ import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import WriteReviw from './pages/WriteReviw';
 import Profile from './pages/Profile';
-import AdminLogin from './pages/AdminLogin';
+import AdminLogin from './admin/AdminLogin';
 import ListingPage from './pages/ListingPage';
+import AdminPage from './admin/AdminPage';
 
 
 
@@ -46,6 +47,8 @@ function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/adminlogin" element={<AdminLogin/>} />
         <Route path="/listing" element={<ListingPage/>} />
+        <Route path="/adminpage" element={<AdminPage/>} />
+
 
        
        

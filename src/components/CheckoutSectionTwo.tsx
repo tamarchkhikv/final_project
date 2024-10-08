@@ -79,9 +79,9 @@ const CheckoutSectionTwo = () => {
                     <h4 className="font-medium text-sm text-[#0E1422]">Total</h4>
                     <span className="font-medium text-sm text-[#0E1422]">$ 78.00</span>
                 </div>
-
-                <button className="w-[372px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8">Place Order</button>
-
+                <a href='payment'>
+                    <button className="w-[372px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8">Place Order</button>
+                </a>
 
 
 
