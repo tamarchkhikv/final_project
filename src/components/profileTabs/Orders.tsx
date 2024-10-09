@@ -15,6 +15,8 @@ const Orders = () => {
             price: '$70.00'
         }
     ]
+    
+
     return (
         <div className="px-12 h-[504px] border-l-[1px] mt-16 mb-[131px]">
             <h2 className="font-semibold text-base text-[#0E1422]">Orders</h2>

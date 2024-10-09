@@ -6,6 +6,11 @@ import { Box, Breadcrumbs, Link, Typography } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import FooterBlack from "../components/FooterBlack";
 import Orders from "../components/profileTabs/Orders";
+import Whishlist from "../components/profileTabs/Whishlist";
+import Address from "../components/profileTabs/Address";
+import Password from "../components/profileTabs/Password";
+import { AccountBalance } from "@mui/icons-material";
+import AccountDetail from "../components/profileTabs/AccountDetail";
 
 
 const Profile = () => {
@@ -99,112 +104,27 @@ const Profile = () => {
 
                         <TabPanels>
                             <TabPanel>
-                               <Orders />
+                                <Orders />
                             </TabPanel>
 
 
                             <TabPanel>
-                                <div className="px-12 h-[504px] border-l-[1px] mt-16 mb-[131px]">
-                                    <h2 className="font-semibold text-base text-[#0E1422]">Wishlist</h2>
-                                    <div className="flex items-center mt-14 pb-8 border-b-[1px]">
-                                        <img src='/images/cartimage1.png' />
-                                        <div className="ml-8 ">
-                                            <h2 className="font-medium text-sm text-[#0E1422]">Raw Black T-Shirt Lineup</h2>
-                                            <h4 className="font-medium text-[12px] text-[#5C5F6A]">Ordered on: 27 July 2023</h4>
-                                            <span className="font-medium text-[12px] text-[#0E1422]">Remove item</span>
-
-
-                                        </div>
-                                        <h3 className="ml-[134px] font-medium text-sm text-[#0E1422]">$75.00</h3>
-
-                                        <button className="border-[1px] border-[#0E1422] rounded-[4px] ml-8 px-6 py-3">Add to cart</button>
-                                    </div>
-
-                                    <div className="flex items-center mt-8">
-                                        <img src='/images/cartimage2.png' />
-                                        <div className="ml-8 ">
-                                            <h2 className="font-medium text-sm text-[#0E1422]">Essential Neutrals</h2>
-
-
-                                            <h4 className="font-medium text-[12px] text-[#5C5F6A]">Added on: 27 July 2023</h4>
-                                            <span className="font-medium text-[12px] text-[#0E1422]">Remove item</span>
-                                        </div>
-                                        <h3 className="ml-[162px] font-medium text-sm text-[#0E1422]">$22.00</h3>
-
-                                        <button className="border-[1px] border-[#0E1422] rounded-[4px] ml-8 px-6 py-3">Add to cart</button>
-                                    </div>
-                                </div>
-
-
+                                <Whishlist />
                             </TabPanel>
 
 
                             <TabPanel>
-                                <div className="px-12 h-[504px] border-l-[1px] mt-16 mb-[131px] w-[534px]">
-                                    <h1 className="font-semibold text-base text-[#0E1422]">Shipping Address</h1>
-                                    <div className="mt-10">
-                                        <label className="font-medium text-sm text-[#000000]">Street Address</label>
-                                        <input className="w-[534px] h-11 border-[1px] rounded-md px-[15px] py-[10px]"></input>
-                                    </div>
-                                    <div className="flex gap-4 mt-4">
-                                        <div>
-                                            <label className="font-medium text-sm text-[#000000]">City</label>
-                                            <input className="w-[259px] h-11 border-[1px] rounded-md px-[15px] py-[10px]"></input>
-                                        </div>
-                                        <div>
-                                            <label className="font-medium text-sm text-[#000000]">State</label>
-                                            <input className="w-[259px] h-11 border-[1px] rounded-md px-[15px] py-[10px]"></input>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4 mt-4">
-                                        <div>
-                                            <label className="font-medium text-sm text-[#000000]">Zip Code</label>
-                                            <input className="w-[259px] h-11 border-[1px] rounded-md px-[15px] py-[10px]"></input>
-                                        </div>
-                                        <div>
-                                            <label className="font-medium text-sm text-[#000000]">Country</label>
-                                            <input className="w-[259px] h-11 border-[1px] rounded-md px-[15px] py-[10px]"></input>
-                                        </div>
-                                    </div>
-                                    <button className='w-36 h-11 rounded-[4px] bg-black text-white py-3 text-sm mt-16'>Save Changes</button>
-                                </div>
-
-
+                                <Address />
                             </TabPanel>
 
                             <TabPanel>
-                                <div className="px-12 h-[504px] border-l-[1px] mt-16 mb-[131px] w-[534px]">
-                                    <h1 className="font-semibold text-base text-[#0E1422]">Change Password</h1>
-                                    <div className="flex flex-col mt-12">
-                                        <label>New Password</label>
-                                        <input className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px]"></input>
-                                    </div>
-                                    <div className="flex flex-col mt-4">
-                                        <label>Confirm Password</label>
-                                        <input className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px]"></input>
-                                    </div>
-                                    <button className='w-36 h-11 rounded-[4px] bg-black text-white py-3 text-sm mt-16'>Change password</button>
-                                </div>
-
+                                <Password />
                             </TabPanel>
 
 
 
                             <TabPanel>
-                                <div className="px-12 h-[504px] border-l-[1px] mt-16 mb-[131px] w-[534px]">
-                                    <h1 className="font-semibold text-base text-[#0E1422]">Account Details</h1>
-                                    <img src='/images/avatar1.svg' className="mt-10" />
-                                    <div className="flex flex-col mt-8">
-                                        <label>Full name</label>
-                                        <input className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px]"></input>
-                                    </div>
-                                    <div className="flex flex-col mt-4">
-                                        <label>Email</label>
-                                        <input className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px]"></input>
-                                    </div>
-                                    <button className='w-36 h-11 rounded-[4px] bg-black text-white py-3 text-sm mt-16'>Save Changes</button>
-                                </div>
-
+                               <AccountDetail/>
                             </TabPanel>
 
                             <TabPanel>
