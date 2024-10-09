@@ -127,19 +127,6 @@ const Profile = () => {
                                <AccountDetail/>
                             </TabPanel>
 
-                            <TabPanel>
-                                <div className=" h-[504px] border-l-[1px] pt-16 pb-[131px]">
-                                    <div className="w-[273px] h-[181px] ml-[280px] mt-[135px]">
-                                        <img src='/images/empty-state.svg' className="w-16 h-16 mx-auto" />
-                                        <h4 className="font-normal text-sm text-[#5C5F6A] text-center">Your order history is waiting to be filled.</h4>
-                                        <div className="mt-6 bg-[#0E1422] w-[179px] h-[44px] flex items-center text-white px-6 text-sm gap-[6px] rounded-md mx-auto">
-                                            <button>Start Shopping</button>
-                                            <img src='/images/arrow-right.png' className="w-6 h-6" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </TabPanel>
-
                         </TabPanels>
                     </div>
 

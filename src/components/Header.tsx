@@ -15,7 +15,7 @@ const Header = () => {
 
 
                 <a href='listing' className="font-medium text-sm text-[#5C5F6A]">Listing</a>
-                <a href='product' className="font-medium text-sm text-[#5C5F6A]">Product</a>
+                <a href='checkout' className="font-medium text-sm text-[#5C5F6A]">Checkout</a>
             </nav>
             <div className="flex items-center gap-8">
                 <div className="flex border-[1px] border-[#E6E7E8] gap-2 px-[15px] py-[10px] rounded-md">
