@@ -138,7 +138,7 @@ const Products = () => {
 
           {tables.map((tables, index) => (
 
-            <tr key={index} className='border-b-[1px] h-20 hover:bg-[#E9E9EB] ' >
+            <tr key={index} className='border-b-[1px] h-20 hover:bg-[#E9E9EB] text-sm font-medium text-[#717171] ' >
 
               <td >
                 <img src={tables.img} className='w-12 h-12 ml-12' /></td>
@@ -157,7 +157,7 @@ const Products = () => {
           ))}
 
         </table>
-        <div className='flex justify-end pt-[34px] pb-10 mb-3'>
+        <div className='flex justify-end pt-[34px] pb-10 mb-3 mr-8'>
           <Stack spacing={2}>
             <MuiPagination count={24} shape="rounded" />
 
