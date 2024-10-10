@@ -29,7 +29,7 @@ const FooterBlack = () => {
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm">COMPANY</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171]">About us</a>
+                            <a className="font-medium text-sm text-[#717171]" href='/aboutadmin'>About Admin</a>
                             <a className="font-medium text-sm text-[#717171]">Contact</a>
                             <a className="font-medium text-sm text-[#717171]">Careers</a>
                         </div>

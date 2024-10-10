@@ -112,7 +112,9 @@ const Products = () => {
         <div className='flex justify-between items-center px-12 '>
           <h2 className='font-medium text-[18px]'>Products</h2>
           <div className='flex gap-4'>
-            <button className='bg-[#0E1422] px-5 text-white  h-10 rounded'>Add product</button>
+            <a href='/addproducts'>
+              <button className='bg-[#0E1422] px-5 text-white  h-10 rounded'>Add product</button>
+            </a>
             <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2'>
               <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
               <input placeholder='Search products' className='w-[130px] outline-none'></input>

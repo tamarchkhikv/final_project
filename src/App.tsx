@@ -16,9 +16,11 @@ import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import WriteReviw from './pages/WriteReviw';
 import Profile from './pages/Profile';
-import AdminLogin from './admin/AdminLogin';
+import AdminLogin from './adminpages/AdminLogin';
 import ListingPage from './pages/ListingPage';
-import AdminPage from './admin/AdminPage';
+import AdminPage from './adminpages/AdminPage';
+import AddProductsPage from './adminpages/AddProductsPage';
+import AboutAdminPage from './adminpages/AboutAdminPage';
 
 
 
@@ -49,6 +51,12 @@ function App() {
         <Route path="/listing" element={<ListingPage/>} />
         <Route path="/listing/:id" element={<Product/>} />
         <Route path="/adminpage" element={<AdminPage/>} />
+        <Route path="addproducts" element={<AddProductsPage/>} />
+        <Route path="/listing/cart" element={<Cart/>} />
+        <Route path="/listing/checkout" element={<Checkout/>} />
+        <Route path="/listing/profile" element={<Profile/>} />
+        <Route path="/listing/listing" element={<ListingPage/>} />
+        <Route path="/aboutadmin" element={<AboutAdminPage/>} />
 
 
        
