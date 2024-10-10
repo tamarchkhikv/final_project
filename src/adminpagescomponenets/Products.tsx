@@ -101,7 +101,7 @@ const Products = () => {
           >
             <Link underline='none' href='#' color='text.secondary'>Admin</Link>
 
-            <Typography color='text.primary' fontWeight='Medium'>Dashboard</Typography>
+            <Typography color='text.primary' fontWeight='Medium'>Products</Typography>
           </Breadcrumbs>
 
         </Box>
@@ -115,7 +115,7 @@ const Products = () => {
             <button className='bg-[#0E1422] px-5 text-white  h-10 rounded'>Add product</button>
             <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2'>
               <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
-              <input placeholder='Search products' className='w-[111px] outline-none'></input>
+              <input placeholder='Search products' className='w-[130px] outline-none'></input>
             </div>
           </div>
         </div>

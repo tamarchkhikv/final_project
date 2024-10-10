@@ -99,7 +99,7 @@ const Orders = () => {
           >
             <Link underline='none' href='#' color='text.secondary'>Admin</Link>
 
-            <Typography color='text.primary' fontWeight='Medium'>Dashboard</Typography>
+            <Typography color='text.primary' fontWeight='Medium'>Orders</Typography>
           </Breadcrumbs>
 
         </Box>
@@ -113,7 +113,7 @@ const Orders = () => {
 
           <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2'>
             <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
-            <input placeholder='Search products' className='w-[111px] outline-none'></input>
+            <input placeholder='Search orders' className='w-[130px] outline-none'></input>
           </div>
 
         </div>

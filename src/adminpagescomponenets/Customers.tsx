@@ -103,7 +103,7 @@ const Customers = () => {
 
           <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2'>
             <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
-            <input placeholder='Search customers' className='w-[111px] outline-none'></input>
+            <input placeholder='Search customers' className='w-[140px] outline-none'></input>
           </div>
 
         </div>
