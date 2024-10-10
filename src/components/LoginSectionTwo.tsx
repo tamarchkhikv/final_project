@@ -17,11 +17,11 @@ const LoginSectionTwo = () => {
 
                 <div className="flex flex-col mt-[34px]">
                     <label>Email</label>
-                    <input className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8]"></input>
+                    <input type='email' className=" w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
                 </div>
                 <div className="flex flex-col mt-[15px]">
                     <label>Password</label>
-                    <input className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8]"></input>
+                    <input type="password" className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
                 </div>
 
                 <a className= "flex justify-end mt-4 font-medium text-[#555555] text-[12px]">Forgot Password?</a>

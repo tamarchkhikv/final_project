@@ -37,8 +37,8 @@ const FooterWhite = () => {
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm">SHOP</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171]">My Account</a>
-                            <a className="font-medium text-sm text-[#717171]">Checkout</a>
+                            <a className="font-medium text-sm text-[#717171]" href='/adminpage'>Admin Page</a>
+                            <a className="font-medium text-sm text-[#717171]" href='/adminlogin'>Admin Login</a>
                             <a className="font-medium text-sm text-[#717171]">Cart</a>
                         </div>
                     </div>

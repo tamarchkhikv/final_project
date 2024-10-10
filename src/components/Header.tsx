@@ -20,7 +20,7 @@ const Header = () => {
             <div className="flex items-center gap-8">
                 <div className="flex border-[1px] border-[#E6E7E8] gap-2 px-[15px] py-[10px] rounded-md">
                     <img src='/images/search.png' className="w-6 h-6" />
-                    <input type='text' placeholder="Search products"></input>
+                    <input type='text' placeholder="Search products" className="outline-none"></input>
                 </div>
                 <div className="flex gap-8">
                     <a href='cart'>

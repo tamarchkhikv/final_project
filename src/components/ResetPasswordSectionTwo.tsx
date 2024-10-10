@@ -8,11 +8,11 @@ const ResetPasswordSectionTwo= () => {
                
                 <div className="flex flex-col">
                     <label>New password</label>
-                    <input className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8]"></input>
+                    <input type='email'className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
                 </div>
                 <div className="flex flex-col mt-4">
                     <label>Confirm password</label>
-                    <input className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8]"></input>
+                    <input type='email' className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
                 </div>
 
                 

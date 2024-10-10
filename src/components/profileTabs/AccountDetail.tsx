@@ -7,11 +7,11 @@ const AccountDetail = () => {
             <img src='/images/avatar1.svg' className="mt-10" />
             <div className="flex flex-col mt-8">
                 <label>Full name</label>
-                <input className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px]"></input>
+                <input type='text' className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px] outline-none"></input>
             </div>
             <div className="flex flex-col mt-4">
                 <label>Email</label>
-                <input className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px]"></input>
+                <input type='email' className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px] outline-none"></input>
             </div>
             <button className='w-36 h-11 rounded-[4px] bg-black text-white py-3 text-sm mt-16'>Save Changes</button>
         </div>

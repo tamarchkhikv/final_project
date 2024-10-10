@@ -8,40 +8,40 @@ const CheckoutSectionTwo = () => {
                 <div className="mt-16">
                     <div className="flex flex-col">
                         <label className="font-medium text-sm text-[#474B57]">Street Address</label>
-                        <input className="w-[534px] h-[45px] rounded-md border-[1px] border-[#E6E7E8]" />
+                        <input type='text' className="w-[534px] h-[45px] rounded-md border-[1px] border-[#E6E7E8] outline-none px-[15px]" />
                     </div>
                     <div>
                         <div className="flex mt-[15px] gap-4" >
                             <div className="flex flex-col">
                                 <label className="font-medium text-sm text-[#474B57]">City</label>
-                                <input className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8]" />
+                                <input type='text' className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8] outline-none px-[15px]" />
                             </div>
                             <div className="flex flex-col">
                                 <label className="font-medium text-sm text-[#474B57]">State</label>
-                                <input className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8]" />
+                                <input type='text' className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8] outline-none px-[15px]" />
                             </div>
                         </div>
 
                         <div className="flex mt-[15px] gap-4">
                             <div className="flex flex-col">
                                 <label className="font-medium text-sm text-[#474B57]">Zip Code</label>
-                                <input className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8]" />
+                                <input type='number' className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8] outline-none px-[15px]" />
                             </div>
                             <div className="flex flex-col">
                                 <label className="font-medium text-sm text-[#474B57]">Country</label>
-                                <input className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8]" />
+                                <input type='text' className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8] outline-none px-[15px]" />
                             </div>
                         </div>
 
                         <div className="flex mt-[51px] gap-4">
                             <div className="flex flex-col">
                                 <label className="font-medium text-sm text-[#474B57]">Email</label>
-                                <input className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8]" />
+                                <input type='email' className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8] outline-none px-[15px]" />
 
                             </div>
                             <div className="flex flex-col">
                                 <label className="font-medium text-sm text-[#474B57]">Full name</label>
-                                <input className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8]" />
+                                <input type='text' className="w-[259px] h-[45px] rounded-md border-[1px] border-[#E6E7E8] outline-none px-[15px]" />
                             </div>
                         </div>
                     </div>
