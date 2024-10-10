@@ -84,7 +84,7 @@ const AdminPage = () => {
 
 
 
-          <div className="bg-[#E9E9EB] w-[1100px] ">
+          <div className="bg-[#E9E9EB] w-[1180px] ">
             <TabPanels>
 
 

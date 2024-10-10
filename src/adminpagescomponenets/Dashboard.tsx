@@ -9,7 +9,7 @@ import ChartThree from '../adminpagescomponenets/ChartThree';
 const Dashboard = () => {
     return (
         <div className='ml-9'>
-            <div className='flex items-center justify-between mt-[22px]'>
+            <div className='flex items-center justify-between py-[22px]'>
                 <Box >
                     <Breadcrumbs
                         aria-label='breadcrumbs'

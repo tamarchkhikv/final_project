@@ -71,7 +71,7 @@ const Reviews = () => {
   return (
 
     <div>
-      <div className='flex items-center justify-between mt-[22px] ml-12'>
+      <div className='flex items-center justify-between py-[22px] ml-12'>
         <Box >
           <Breadcrumbs
             aria-label='breadcrumbs'
@@ -87,7 +87,7 @@ const Reviews = () => {
 
         <img src='/images/logout.svg' className='mr-3' />
       </div>
-      <div className=' max-w-[1069px] mx-auto bg-white mt-16 pt-6 rounded'>
+      <div className=' max-w-[1069px] mx-auto h-[922px] bg-white mt-16 pt-6 rounded'>
         <div className='flex justify-between items-center px-12 '>
           <h2 className='font-medium text-[18px]'>Products</h2>
 
@@ -130,7 +130,7 @@ const Reviews = () => {
           ))}
 
         </table>
-        <div className='flex justify-end pt-[34px] pb-10 mb-3 mr-8'>
+        <div className='flex justify-end pt-[34px] mr-8'>
           <Stack spacing={2}>
             <MuiPagination count={24} shape="rounded" />
 
