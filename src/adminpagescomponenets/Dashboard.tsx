@@ -44,15 +44,15 @@ const Dashboard = () => {
                         <h2 className="font-bold text-2xl text-[#1C1D22]">$2,400</h2>
                         <span className="font-medium text-[12px] text-[#5C5F6A]">  —  Total Sales</span>
                     </div>
-                    <div className='flex justify-center w-[270px] h-7 border-[1px] rounded-[100px] ml-8 mt-6'>
+                    <div className='flex justify-center items-center w-[270px] h-7 border-[1px] rounded-[100px] ml-8 mt-6'>
                         <h3 className='font-medium text-[12px] text-[#5C5F6A]'>Classic Monochrome Tees —  </h3>
                         <span className='font-medium text-[12px] text-black'>$940 Sales</span>
                     </div>
-                    <div className='flex justify-center w-[267px] h-7 border-[1px] rounded-[100px] ml-8 mt-3'>
+                    <div className='flex justify-center items-center w-[267px] h-7 border-[1px] rounded-[100px] ml-8 mt-3'>
                         <h3 className='font-medium text-[12px] text-[#5C5F6A]'>Monochromatic Wardrobe —  </h3>
                         <span className='font-medium text-[12px] text-black'>$790 Sales</span>
                     </div>
-                    <div className='flex justify-center w-[221px] h-7 border-[1px] rounded-[100px] ml-8 mt-3'>
+                    <div className='flex justify-center items-center w-[221px] h-7 border-[1px] rounded-[100px] ml-8 mt-3'>
                         <h3 className='font-medium text-[12px] text-[#5C5F6A]'>Essential Neutrals —  </h3>
                         <span className='font-medium text-[12px] text-black'>$740 Sales</span>
                     </div>
