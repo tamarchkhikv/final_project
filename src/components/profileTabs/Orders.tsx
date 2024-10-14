@@ -29,7 +29,7 @@ const Orders = () => {
             <div className='mt-6'>
                 {productArray.map((product: any, key: any) => (
 
-                    <div className="flex items-center py-8 border-b-[1px]">
+                    <div key={key} className="flex items-center py-8 border-b-[1px]">
                         <img src={product.img} />
                         <div className="ml-8 ">
                             <h2 className="font-medium text-sm text-[#0E1422]">{product.title}</h2>

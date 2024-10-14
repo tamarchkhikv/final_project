@@ -7,6 +7,43 @@ import ChartThree from '../adminpagescomponenets/ChartThree';
 
 
 const Dashboard = () => {
+    const tables = [
+        {
+            item: 'Mens Black T-Shirts',
+            data: '20 Mar, 2023',
+            total: "$75.00",
+            status: 'Processing'
+
+        },
+        {
+            item: 'Essential Neutrals',
+            data: '19 Mar, 2023',
+            total: "$22.00",
+            status: 'Processing'
+
+        },
+        {
+            item: 'Sleek and Cozy Black',
+            data: '7 Feb, 2023',
+            total: "$57.00",
+            status: 'Completed'
+
+        },
+        {
+            item: 'MOCKUP Black',
+            data: '29 Jan, 2023',
+            total: "$30.00",
+            status: 'Completed'
+
+        },
+        {
+            item: 'Monochromatic Wardrobe',
+            data: '27 Jan, 2023',
+            total: "$27.00",
+            status: 'Completed'
+
+        },
+    ]
     return (
         <div className='ml-9'>
             <div className='flex items-center justify-between py-[22px]'>
@@ -74,44 +111,16 @@ const Dashboard = () => {
                             <th className='py-4'>Total</th>
                             <th className='py-4'>Status</th>
                         </tr>
+                        {tables.map((tables, index) => (
+                            <tr className='border-b-[1px]  hover:bg-[#E9E9EB]' key={index} >
 
-                        <tr className='border-b-[1px]' >
-                            
-                                <td className='py-4'>Mens Black T-Shirts</td>
-                                <td className='py-4'>20 Mar, 2023</td>
-                                <td className='py-4'>$75.00</td>
-                                <td className='py-4'>Processing</td>
-                           
-                        </tr>
+                                <td className='py-4'>{tables.item}</td>
+                                <td className='py-4'>{tables.data}</td>
+                                <td className='py-4'>{tables.total}</td>
+                                <td className='py-4'>{tables.status}</td>
 
-                        <tr className='border-b-[1px]' >
-                            <td className='py-4'>Essential Neutrals</td>
-                            <td className='py-4'>19 Mar, 2023</td>
-                            <td className='py-4'>$22.00</td>
-                            <td className='py-4'>Processing</td>
-
-                        </tr>
-                        <tr className='border-b-[1px]'>
-                            <td className='py-4'>Sleek and Cozy Black</td>
-                            <td className='py-4'>7 Feb, 2023</td>
-                            <td className='py-4'>$57.00</td>
-                            <td className='py-4'>Completed</td>
-                        </tr>
-
-                        <tr className='border-b-[1px]'>
-                            <td className='py-4'>MOCKUP Black</td>
-                            <td className='py-4'>29 Jan, 2023</td>
-                            <td className='py-4'>$30.00</td>
-                            <td className='py-4'>Completed</td>
-                        </tr>
-
-                        <tr className='border-b-[1px]'>
-                            <td className='py-4'>Monochromatic Wardrobe</td>
-                            <td className='py-4'>27 Jan, 2023</td>
-                            <td className='py-4'>$27.00</td>
-                            <td className='py-4'>Completed</td>
-                        </tr>
-
+                            </tr>
+                        ))}
                     </table>
                 </div>
 
