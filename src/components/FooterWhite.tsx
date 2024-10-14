@@ -3,8 +3,8 @@ const FooterWhite = () => {
     return (
         <div>
             <div className="max-w-[1116px] mx-auto flex">
-                <div className="w-[272px] h-[50px]">
-                    <div className="flex items-center mt-[88px] gap-5">
+                <div className="w-[272px] h-[160px] mt-[88px] ">
+                    <div className="flex items-center gap-5">
                         <img src='/images/logo-mark.png' />
                         <h2 className="font-extrabold text-xl text-[#0E1422]">Ecommerce</h2>
                     </div>
@@ -46,7 +46,7 @@ const FooterWhite = () => {
 
                 <div className="mt-[79px] ml-[159px]">
                     <h3 className="text-[#878A92] font-medium text-sm">ACCEPTED PAYMENTS</h3>
-                    <div className="mt-10 flex gap-4">
+                    <div className="mt-10 lg:flex lg:gap-4">
                         <img src="/images/mastercard.png" />
                         <img src="/images/amex.png" />
                         <img src="/images/visa.png" />
@@ -57,7 +57,7 @@ const FooterWhite = () => {
 
             </div>
 
-            <div className="mt-[104px] flex justify-center py-[27px] px-[587px] border-t-[1px]">
+            <div className="max-w-[1116px] mx-auto mt-[104px] flex justify-center py-[27px] border-t-[1px]">
                 <h5 className="font-normal text-sm text-[#5C5F6A]">© 2023 DevCut. All rights reserved.</h5>
             </div>
 

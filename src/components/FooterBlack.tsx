@@ -57,7 +57,7 @@ const FooterBlack = () => {
 
             </div>
 
-            <div className="mt-[104px] flex justify-center py-[27px] px-[587px] border-t-[1px]">
+            <div className=" max-w-[1116px] mx-auto mt-[104px] flex justify-center py-[27px] border-t-[1px]">
                 <h5 className="font-normal text-sm text-[#5C5F6A]">© 2023 DevCut. All rights reserved.</h5>
             </div>
 
