@@ -65,7 +65,7 @@ const HomePageSectionTwo = () => {
 
             <div className="mt-[80px] grid grid-flow-col gap-10">
                 {products.map((product, index) => (
-                    <a key={index} href={`/homepage/${product.id}`}>
+                    <a key={index} href={`/${product.id}`}>
                         <img src={product.img} />
                         <h4 className="mt-[25px] font-medium text-sm">{product.title}</h4>
                         <div className="flex gap-4 mt-[14px]">

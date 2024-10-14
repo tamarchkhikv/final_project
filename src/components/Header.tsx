@@ -4,13 +4,13 @@ import DropDown from "./DropDown";
 const Header = () => {
     return (
         <div className="flex items-center justify-between max-w-[1116px] mx-auto  border-b-[1px] py-5">
-            <a className="flex items-center gap-2" href='/homepage'>
+            <a className="flex items-center gap-2" href='/'>
                 <img src="/images/logomark.png" />
                 <h2 className="font-extrabold text-xl text-[#0E1422]">Ecommerce</h2>
             </a>
 
             <nav className="flex gap-8 ">
-                <a href='/homepage' className="font-medium text-sm text-[#5C5F6A]">Home</a>
+                <a href='/' className="font-medium text-sm text-[#5C5F6A]">Home</a>
                 <DropDown />
 
 
