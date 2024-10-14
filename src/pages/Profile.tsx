@@ -45,59 +45,39 @@ const Profile = () => {
 
                     <div className="flex gap-9">
 
-                        <TabList>
-                            <div className="flex flex-col mt-[120px] gap-4 w-[212px]">
+                        <TabList className="flex flex-col mt-[120px] gap-4 w-[212px]">
 
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/cart.svg" />
-                                        <button>Orders</button>
-                                    </div>
-
-                                </Tab>
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                                <img src="/images/cart.svg" />
+                                <button>Orders</button>
+                            </Tab>
 
 
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/heart.svg" />
-                                        <button>Wishlist</button>
-                                    </div>
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                                <img src="/images/heart.svg" />
+                                <button>Wishlist</button>
+                            </Tab>
 
-                                </Tab>
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                                <img src="/images/delivery.svg" />
+                                <button>Address</button>
+                            </Tab>
 
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/delivery.svg" />
-                                        <button>Address</button>
-                                    </div>
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                                <img src="/images/key.svg" />
+                                <button>Password</button>
+                            </Tab>
 
-                                </Tab>
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                                <img src="/images/user.svg" />
+                                <button>Account Detail</button>
+                            </Tab>
 
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/key.svg" />
-                                        <button>Password</button>
-                                    </div>
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                                <img src="/images/logout.svg" />
+                                <button>Logout</button>
+                            </Tab>
 
-                                </Tab>
-
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/user.svg" />
-                                        <button>Account Detail</button>
-                                    </div>
-
-                                </Tab>
-
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/logout.svg" />
-                                        <button>Logout</button>
-                                    </div>
-
-                                </Tab>
-
-                            </div>
                         </TabList>
 
 
@@ -124,7 +104,7 @@ const Profile = () => {
 
 
                             <TabPanel>
-                               <AccountDetail/>
+                                <AccountDetail />
                             </TabPanel>
 
                         </TabPanels>
