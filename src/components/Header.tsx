@@ -4,7 +4,7 @@ import BurgerMenu from "./BurgerMenu";
 
 const Header = () => {
     return (
-        <div className="flex items-center justify-between max-w-[1116px] mx-auto  border-b-[1px] py-5">
+        <div className="flex items-center justify-between max-w-[1116px] mx-auto  border-b-[1px] py-5 sticky top-0 bg-white">
             <a className="flex items-center gap-2" href='/'>
                 <img src="/images/logomark.png" />
                 <h2 className="font-extrabold text-xl text-[#0E1422]">Ecommerce</h2>

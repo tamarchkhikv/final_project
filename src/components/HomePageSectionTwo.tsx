@@ -63,7 +63,7 @@ const HomePageSectionTwo = () => {
                 </div>
             </div>
 
-            <div className="mt-[80px] grid grid-flow-col gap-10">
+            <div className="mt-[80px] grid grid-flow-col gap-10 overflow-auto">
                 {products.map((product, index) => (
                     <a key={index} href={`/${product.id}`}>
                         <img src={product.img} />
