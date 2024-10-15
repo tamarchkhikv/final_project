@@ -1,5 +1,6 @@
 import React from "react";
 import DropDown from "./DropDown";
+import BurgerMenu from "./BurgerMenu";
 
 const Header = () => {
     return (
@@ -8,7 +9,7 @@ const Header = () => {
                 <img src="/images/logomark.png" />
                 <h2 className="font-extrabold text-xl text-[#0E1422]">Ecommerce</h2>
             </a>
-
+            <BurgerMenu/>
             <nav className="flex gap-8 ">
                 <a href='/' className="font-medium text-sm text-[#5C5F6A]">Home</a>
                 <DropDown />
