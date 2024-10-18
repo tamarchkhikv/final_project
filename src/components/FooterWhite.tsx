@@ -10,9 +10,15 @@ const FooterWhite = () => {
                     </div>
                     <p className="mt-3 text-[#717171] font-normal text-sm">DevCut is a YouTube channel for practical project-based learning.</p>
                     <div className="flex gap-[26px] mt-8">
-                        <img src="/images/github.png" />
-                        <img src="/images/instagram.png" />
-                        <img src="/images/youtube.png" />
+                        <a href="#">
+                            <img src="/images/github.png" className="hover:scale-110" />
+                        </a>
+                        <a href="#">
+                            <img src="/images/instagram.png" className="hover:scale-110" />
+                        </a>
+                        <a href="#">
+                            <img src="/images/youtube.png" className="hover:scale-110" />
+                        </a>
                     </div>
 
                 </div>
@@ -21,25 +27,25 @@ const FooterWhite = () => {
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm">SUPPORT</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171]">FAQ</a>
-                            <a className="font-medium text-sm text-[#717171]">Terms of use</a>
-                            <a className="font-medium text-sm text-[#717171]">Privacy Policy</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline">FAQ</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline">Terms of use</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline">Privacy Policy</a>
                         </div>
                     </div>
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm">COMPANY</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171]" href='/aboutadmin'>About Admin</a>
-                            <a className="font-medium text-sm text-[#717171]">Contact</a>
-                            <a className="font-medium text-sm text-[#717171]">Careers</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline">Cart</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline">Contact</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline">Careers</a>
                         </div>
                     </div>
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm">ADMIN</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171]" href='/adminpage'>Admin Page</a>
-                            <a className="font-medium text-sm text-[#717171]" href='/adminlogin'>Admin Login</a>
-                            <a className="font-medium text-sm text-[#717171]">Cart</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline" href='/adminpage'>Admin Page</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline" href='/adminlogin'>Admin Login</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline" href='/aboutadmin'>About Admin</a>
                         </div>
                     </div>
                 </div>
@@ -47,9 +53,9 @@ const FooterWhite = () => {
                 <div className="mt-[79px] ml-[159px]">
                     <h3 className="text-[#878A92] font-medium text-sm">ACCEPTED PAYMENTS</h3>
                     <div className="mt-10 lg:flex lg:gap-4">
-                        <img src="/images/mastercard.png" />
-                        <img src="/images/amex.png" />
-                        <img src="/images/visa.png" />
+                        <img src="/images/mastercard.png" className="hover:scale-110" />
+                        <img src="/images/amex.png" className="hover:scale-110"/>
+                        <img src="/images/visa.png" className="hover:scale-110" />
                     </div>
                 </div>
 
