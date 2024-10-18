@@ -7,41 +7,26 @@ import MinimumDistanceSlider from "./RangeSlider";
 
 const Categories = () => {
 
+    const variants = [
+        "Perfume",
+        "Trousers",
+        "Shoe",
+        "Handbag",
+        "Hat",
+        "Thermos",
+    ];
+
     return (
         <div className="w-[248px] h-[828px] px-3 pt-6 pb-8 border-[1px] border-[#E6E7E8]">
             <h2 className="font-medium text-sm text-[#0E1422]">Categories</h2>
-            <ul>
-                <div className="flex px-1 py-3 gap-2 border-b-[1px] border-[#E9E9EB]">
-                    <input type='checkbox'></input>
-                    <li className="font-normal text-sm text-[#474B57] ">Perfume</li>
-                </div>
+            <ul className="mt-4">
+                {variants.map((variant, index) => (
+                    <div key={index} className="flex px-1 py-3 gap-2 border-b-[1px] border-[#E9E9EB]">
+                        <input type='checkbox'></input>
+                        <li className="font-normal text-sm text-[#474B57] ">{variant}</li>
+                    </div>
+                ))}
 
-
-                <div className="flex px-1 py-3 gap-2 border-b-[1px] border-[#E9E9EB]">
-                    <input type='checkbox'></input>
-                    <li className="font-normal text-sm text-[#474B57] ">Trousers</li>
-                </div>
-
-
-                <div className="flex px-1 py-3 gap-2 border-b-[1px] border-[#E9E9EB]">
-                    <input type='checkbox'></input>
-                    <li className="font-normal text-sm text-[#474B57] ">Shoe</li>
-                </div>
-
-                <div className="flex px-1 py-3 gap-2 border-b-[1px] border-[#E9E9EB]">
-                    <input type='checkbox'></input>
-                    <li className="font-normal text-sm text-[#474B57] ">Handbag</li>
-                </div>
-
-                <div className="flex px-1 py-3 gap-2 border-b-[1px] border-[#E9E9EB]">
-                    <input type='checkbox'></input>
-                    <li className="font-normal text-sm text-[#474B57] ">Hat</li>
-                </div>
-
-                <div className="flex px-1 py-3 gap-2 border-b-[1px] border-[#E9E9EB]">
-                    <input type='checkbox'></input>
-                    <li className="font-normal text-sm text-[#474B57] ">Thermos</li>
-                </div>
             </ul>
 
             <div className="flex flex-col gap-3 mt-10 ">
@@ -142,10 +127,10 @@ const Categories = () => {
 
                 <div className="mt-10"></div>
                 <h2 className="font-medium text-sm text-[#0E1422]">Price</h2>
-                <MinimumDistanceSlider/>
-                
+                <MinimumDistanceSlider />
+
             </div>
-        
+
 
 
 

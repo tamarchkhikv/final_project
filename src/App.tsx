@@ -21,6 +21,8 @@ import ListingPage from './pages/ListingPage';
 import AdminPage from './adminpages/AdminPage';
 import AddProductsPage from './adminpages/AddProductsPage';
 import AboutAdminPage from './adminpages/AboutAdminPage';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 
@@ -29,6 +31,19 @@ import AboutAdminPage from './adminpages/AboutAdminPage';
 
 
 function App() {
+  React.useEffect(()=>{
+    AOS.init({
+      offset:100,
+      duration:800,
+      easing:"ease-in-sine",
+      delay:200,
+    })
+    AOS.refresh();
+  }, []);
+
+
+
+
   return (
     <Provider store={store}>
       
