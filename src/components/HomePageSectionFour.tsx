@@ -19,7 +19,7 @@ const HomePageSectionFour = () => {
         {
             id: 7,
             img: "/images/image-7.png",
-            title: "Raw Black Tees<",
+            title: "Raw Black Tees",
             stock: "IN STOCK",
             price: "$ 19.00",
         },
