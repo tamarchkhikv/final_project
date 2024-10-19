@@ -112,12 +112,13 @@ const Listing = () => {
 
             <div className="grid grid-rows-3 grid-flow-col gap-10  mt-4">
                 {products.products.map((product:any, index:number) => (
-                    <a key={index} href={`/listing/${product.id}`}>
+                    <a key={index} href={`/listing/${product.id}`} className="transform transition-transform duration-300
+                    hover:scale-105 cursor-pointer">
                         <div className="w-60 h-80 bg-neutral-100 rounded">
                             <img src={product.img} />
                         </div>
                         <div>
-                            <p className="font-medium text-sm mt-3">{product.title}</p>
+                            <p className="font-medium text-sm mt-3  hover:text-gray-500">{product.title}</p>
                             <div className="flex items-center  mt-2 ">
                                 <button className="bg-white text-center w-20 h-7 rounded-full border text-xs font-medium mt-3 items-center">
                                     {product.stock}
