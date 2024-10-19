@@ -12,12 +12,12 @@ const Header = () => {
             </a>
             {/* <BurgerMenu/> */}
             <nav className="flex gap-8 ">
-                <a href='/' className="font-medium text-sm text-[#5C5F6A] hover:underline">Home</a>
+                <a href='/' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Home</a>
                 <DropDown />
 
 
-                <a href='listing' className="font-medium text-sm text-[#5C5F6A] hover:underline">Listing</a>
-                <a href='checkout' className="font-medium text-sm text-[#5C5F6A] hover:underline">Checkout</a>
+                <a href='listing' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Listing</a>
+                <a href='checkout' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Checkout</a>
             </nav>
             <div className="flex items-center gap-8">
                 <form className="flex border-[1px] border-[#E6E7E8] gap-2 px-[15px] py-[10px] rounded-md hover:scale-105">

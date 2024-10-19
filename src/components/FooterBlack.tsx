@@ -27,25 +27,25 @@ const FooterBlack = () => {
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm">SUPPORT</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171] hover:underline">FAQ</a>
-                            <a className="font-medium text-sm text-[#717171] hover:underline">Terms of use</a>
-                            <a className="font-medium text-sm text-[#717171] hover:underline">Privacy Policy</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4">FAQ</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4">Terms of use</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4">Privacy Policy</a>
                         </div>
                     </div>
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm ">COMPANY</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171] hover:underline" >Cart</a>
-                            <a className="font-medium text-sm text-[#717171] hover:underline">Contact</a>
-                            <a className="font-medium text-sm text-[#717171] hover:underline">Careers</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4" >Cart</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4">Contact</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4">Careers</a>
                         </div>
                     </div>
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm">ADMIN</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171] hover:underline" href='/adminpage'>Admin Page</a>
-                            <a className="font-medium text-sm text-[#717171] hover:underline" href="/adminlogin">Admin Login</a>
-                            <a className="font-medium text-sm text-[#717171] hover:underline" href='/aboutadmin'>About Admin</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4" href='/adminpage'>Admin Page</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4" href="/adminlogin">Admin Login</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4" href='/aboutadmin'>About Admin</a>
                         </div>
                     </div>
                 </div>
