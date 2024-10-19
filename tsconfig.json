@@ -6,7 +6,9 @@
     "jsx": "react",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "useUnknownInCatchVariables": false
   },
-  "include": ["src/**/*"]
+  
+  "include": ["src/**/*", "src/store/app/.productSlice.jsc"]
  }
