@@ -86,7 +86,7 @@ const HomePageSectionFour = () => {
                           hover:scale-105 cursor-pointer">
                                 <a key={index} href={`/${product.id}`}>
                                     <img src={product.img} />
-                                    <h4 className="mt-[25px] font-medium text-sm">{product.title}</h4>
+                                    <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500">{product.title}</h4>
                                     <div className="flex gap-4 mt-[14px]">
                                         <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{product.stock}</div>
 
@@ -106,7 +106,7 @@ const HomePageSectionFour = () => {
                           hover:scale-105 cursor-pointer">
                                 <a key={index} href={`/${item.id}`}>
                                     <img src={item.img} />
-                                    <h4 className="mt-[25px] font-medium text-sm">{item.title}</h4>
+                                    <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500">{item.title}</h4>
                                     <div className="flex gap-4 mt-[14px]">
                                         <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{item.stock}</div>
 

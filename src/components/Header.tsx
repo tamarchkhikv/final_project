@@ -20,16 +20,16 @@ const Header = () => {
                 <a href='checkout' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Checkout</a>
             </nav>
             <div className="flex items-center gap-8">
-                <form className="flex border-[1px] border-[#E6E7E8] gap-2 px-[15px] py-[10px] rounded-md hover:scale-105">
+                <form className="flex border-[1px] border-[#E6E7E8] gap-2 px-[15px] py-[10px] rounded-md transform transition-transform duration-300 hover:scale-105">
                     <img src='/images/search.png' className="w-6 h-6" />
                     <input type='text' placeholder="Search products" className="outline-none"></input>
                 </form>
                 <div className="flex gap-8">
                     <a href='cart'>
-                        <img src='/images/icon.png' className="w-[24px] h-[24px] hover:scale-110" />
+                        <img src='/images/icon.png' className="w-[24px] h-[24px] transform transition-transform duration-300 hover:scale-110" />
                     </a>
                     <a href='profile'>
-                        <img src='/images/user.png' className="w-[26px] h-[26px] hover:scale-110" />
+                        <img src='/images/user.png' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-110" />
                     </a>
                 </div>
             </div>
