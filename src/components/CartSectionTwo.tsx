@@ -15,9 +15,9 @@ const CartSectionTwo = () => {
                             <div>
                                 {cart.products.map((product:any) => (
                                 <div className="flex items-center">
-                                    <img src={product.image}/>
+                                    <img src='/images/image-7.png'className="w-[80px] h-[80px]"/>
                                     <div className="ml-8 mt-2">
-                                        <h2 className="font-medium text-sm text-[#0E1422]">{product.title}</h2>
+                                        <h2 className="font-medium text-sm text-[#0E1422]">UTRAANET Black</h2>
                                         <div className="flex items-center gap-[6px] mt-[6px]">
 
                                             <span className="font-medium text-[12px] text-[#5C5F6A]">Color:</span>
