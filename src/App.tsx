@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Product from './pages/Product';
+import Product from './pages/ProductPage';
 import Cart from './pages/Cart';
 import Homepage from './pages/Homepage';
 // import Counter from './pages/Counter';
@@ -64,7 +64,7 @@ function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/adminlogin" element={<AdminLogin/>} />
         <Route path="/listing" element={<ListingPage/>} />
-        <Route path="/listing/:id" element={<Product/>} />
+        {/* <Route path="/listing/:id" element={<Product/>} /> */}
         <Route path="/adminpage" element={<AdminPage/>} />
         <Route path="addproducts" element={<AddProductsPage/>} />
         <Route path="/listing/cart" element={<Cart/>} />

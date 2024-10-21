@@ -1,6 +1,6 @@
 
 
-export const ProductsData: any[] = [
+export const ProductsData = [
 
     {
         id: 1,

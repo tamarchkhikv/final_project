@@ -3,7 +3,7 @@ import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import Orders from "../adminpagescomponenets/Orders";
 import Dashboard from "../adminpagescomponenets/Dashboard";
 import Customers from "../adminpagescomponenets/Customers";
-import Products from "../adminpagescomponenets/Products";
+import Products from "../adminpagescomponenets/AdminProducts";
 import Reviews from "../adminpagescomponenets/Reviews";
 import Settings from "../adminpagescomponenets/Settings";
 

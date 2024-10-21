@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect}from "react";
 import { Box, Breadcrumbs, Link, Typography } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { Swiper as MySwiper, SwiperSlide } from 'swiper/react';
@@ -8,10 +8,34 @@ import { Pagination } from 'swiper/modules';
 import RadioButton from "./RadioButton";
 import ColorRadioButton from "./ColorRadioButton";
 import { useState } from "react";
+import { addToCart } from "../store/app/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../store/store";
+import { setProducts } from "../store/app/productSlice";
+import { ProductsData } from "../components/Data";
+
+
+
 
 
 
 const ProductPageSectionOne = () => {
+
+
+
+    const dispatch = useDispatch()
+    const products = useSelector((state: RootState) => state.product)
+    useEffect(() => {
+        dispatch(setProducts(ProductsData))
+    })
+    const handleAddToCart = (e: any, products: any) => {
+        e.preventDefault()
+        dispatch(addToCart(products))
+        alert("Product Added Succesfully!")
+        console.log (products)
+
+
+    }
 
 
     const [count, setCount] = useState(1);
@@ -107,9 +131,9 @@ const ProductPageSectionOne = () => {
 
 
                         </div>
-                        <div className="mt-10 flex items-center gap-4">
+                        <div className="mt-10 flex items-center gap-4" onClick={(e) => handleAddToCart(e, products)}>
                             <button className=" bg-black w-[285px] h-[44px] text-white rounded-[4px]">Add to cart</button>
-                            <img src="/images/whishlist.svg" className="w-[43px] h-[43px]"/>
+                            <img src="/images/whishlist.svg" className="w-[43px] h-[43px]" />
 
                         </div>
 

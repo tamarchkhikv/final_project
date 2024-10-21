@@ -5,7 +5,7 @@ import MuiPagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
 
-const Products = () => {
+const AdminProducts = () => {
   const tables = [
     {
       img: "/images/image-1.png",
@@ -172,4 +172,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default AdminProducts;

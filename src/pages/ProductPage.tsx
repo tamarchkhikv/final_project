@@ -8,7 +8,7 @@ import NewsLetter from "../components/NewsLetter";
 import FooterWhite from "../components/FooterWhite";
 
 
-const Product = ()=>{
+const ProductPage = ()=>{
     return(
         <div>
             <DiscountBanner/>
@@ -22,4 +22,4 @@ const Product = ()=>{
         </div>
     )
 }
-export default Product;
+export default ProductPage;

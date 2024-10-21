@@ -3,83 +3,18 @@ import CustomPagination from "./CustomPagination";
 import { setProducts } from "../store/app/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { ProductsData } from "../components/Data";
+import { RootState } from "../store/store";
 
 
 
 const Listing = () => {
 
     const dispatch = useDispatch()
-    const products = useSelector(state => state.product)
-    useEffect(()=>{
+    const products = useSelector((state: RootState) => state.product)
+    useEffect(() => {
         dispatch(setProducts(ProductsData))
     })
 
-    // const products = [
-    //     {
-    //         id: 1,
-    //         img: "/images/image-1.png",
-    //         title: "Classic Monochrome Tees",
-    //         stock: "IN STOCK",
-    //         price: "$ 35.00",
-    //     },
-    //     {
-    //         id: 2,
-    //         img: "/images/image-2.png",
-    //         title: "Monochromatic Wardrobe",
-    //         stock: "IN STOCK",
-    //         price: "$ 27.00",
-    //     },
-    //     {
-    //         id: 3,
-    //         img: "/images/image-3.png",
-    //         title: "Essential Neutrals",
-    //         stock: "IN STOCK",
-    //         price: "$ 22.00",
-    //     },
-    //     {
-    //         id: 4,
-    //         img: "/images/image-4.png",
-    //         title: "UTRAANET Black",
-    //         stock: "IN STOCK",
-    //         price: "$ 47.00",
-    //     },
-
-    //     {
-    //         id: 5,
-    //         img: "/images/image-5.png",
-    //         title: "Classic Monochrome Tees",
-    //         stock: "IN STOCK",
-    //         price: "$ 35.00",
-    //     },
-    //     {
-    //         id: 6,
-    //         img: "/images/image-6.png",
-    //         title: "Monochromatic Wardrobe",
-    //         stock: "IN STOCK",
-    //         price: "$ 27.00",
-    //     },
-    //     {
-    //         id: 7,
-    //         img: "/images/image-8.png",
-    //         title: "Essential Neutrals",
-    //         stock: "IN STOCK",
-    //         price: "$ 22.00",
-    //     },
-    //     {
-    //         id: 8,
-    //         img: "/images/image-2.png",
-    //         title: "UTRAANET Black",
-    //         stock: "IN STOCK",
-    //         price: "$ 47.00",
-    //     },
-    //     {
-    //         id: 9,
-    //         img: "/images/image-4.png",
-    //         title: "UTRAANET Black",
-    //         stock: "IN STOCK",
-    //         price: "$ 47.00",
-    //     },
-    // ];
     return (
         <div className="w-[824px] ml-10">
             <h2 className="font-medium text-sm text-[#0E1422]">Applied Filters:</h2>
@@ -87,13 +22,13 @@ const Listing = () => {
                 <div className="flex items-center  justify-center gap-2 w-[111px] h-9 border-[1px] rounded-[100px] ">
                     <h3 className="font-medium text-[12px] text-[#0E1422]">Perfume</h3>
                     <button>
-                        <img src='/images/x.svg'/>
+                        <img src='/images/x.svg' />
                     </button>
                 </div>
                 <div className="flex items-center  justify-center gap-2 w-[111px] h-9 border-[1px] rounded-[100px]">
                     <h3 className="font-medium text-[12px] text-[#0E1422]">Size: M</h3>
                     <button>
-                        <img src='/images/x.svg'/>
+                        <img src='/images/x.svg' />
                     </button>
                 </div>
             </div>
@@ -103,16 +38,18 @@ const Listing = () => {
                 <div className="flex gap-[6px] items-center">
                     <h3 className="font-medium text-[12px] text-[#5C5F6A]">SORT BY</h3>
                     <button>
-                        <img src='/images/down.svg'/>
+                        <img src='/images/down.svg' />
                     </button>
                 </div>
 
             </div>
-        
+
 
             <div className="grid grid-rows-3 grid-flow-col gap-10  mt-4">
-                {products.products.map((product:any, index:number) => (
-                    <a key={index} href={`/listing/${product.id}`} className="transform transition-transform duration-300
+                {products.products.map((product: any, index: number) => (
+                    <a key={index}
+                        // href={`/listing/${product.id}`}
+                        className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer">
                         <div className="w-60 h-80 bg-neutral-100 rounded">
                             <img src={product.img} />
@@ -131,7 +68,7 @@ const Listing = () => {
                     </a>
                 ))}
             </div>
-            <CustomPagination/>
+            <CustomPagination />
         </div>
     )
 }
