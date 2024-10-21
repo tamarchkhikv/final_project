@@ -1,37 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { setProducts } from "../store/app/productSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { ProductsData } from "../components/Data";
+import { RootState } from "../store/store";
+
 const HomePageSectionTwo = () => {
 
 
-    const products: any[] = [
-        {
-            id: 1,
-            img: "/images/image-1.png",
-            title: "Classic Monochrome Tees",
-            stock: "IN STOCK",
-            price: "$ 35.00",
-        },
-        {
-            id: 2,
-            img: "/images/image-2.png",
-            title: "Monochromatic Wardrobe",
-            stock: "IN STOCK",
-            price: "$ 27.00",
-        },
-        {
-            id: 3,
-            img: "/images/image-3.png",
-            title: "Essential Neutrals",
-            stock: "IN STOCK",
-            price: "$ 22.00",
-        },
-        {
-            id: 4,
-            img: "/images/image-4.png",
-            title: "UTRAANET Black",
-            stock: "IN STOCK",
-            price: "$ 43.00",
-        }
-    ]
+    const dispatch = useDispatch()
+    const products = useSelector((state: RootState) => state.product)
+    useEffect(() => {
+        dispatch(setProducts(ProductsData))
+    })
 
     const infoItems = [
         {
@@ -77,7 +57,7 @@ const HomePageSectionTwo = () => {
             </div>
 
             <div className="mt-[80px] grid grid-flow-col gap-10 ">
-                {products.map((product, index) => (
+                {products.products.slice(2, 6).map((product: any, index: any) => (
                     <div className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer">
                         <a
