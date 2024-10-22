@@ -9,11 +9,13 @@ import Orders from "../components/profileTabs/Orders";
 import Whishlist from "../components/profileTabs/Whishlist";
 import Address from "../components/profileTabs/Address";
 import Password from "../components/profileTabs/Password";
-import { AccountBalance } from "@mui/icons-material";
+// import { AccountBalance } from "@mui/icons-material";
 import AccountDetail from "../components/profileTabs/AccountDetail";
+import { useNavigate } from "react-router-dom";
 
 
 const Profile = () => {
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -49,33 +51,33 @@ const Profile = () => {
 
                             <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
                                 <img src="/images/cart.svg" />
-                                <button>Orders</button>
+                                <button onClick={()=>{navigate(`/profile?search=orders`)}}>Orders</button>
                             </Tab>
 
 
                             <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
                                 <img src="/images/heart.svg" />
-                                <button>Wishlist</button>
+                                <button onClick={()=>{navigate(`/profile?search=wishlist`)}}>Wishlist</button>
                             </Tab>
 
                             <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
                                 <img src="/images/delivery.svg" />
-                                <button>Address</button>
+                                <button onClick={()=>{navigate(`/profile?search=address`)}}>Address</button>
                             </Tab>
 
                             <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
                                 <img src="/images/key.svg" />
-                                <button>Password</button>
+                                <button onClick={()=>{navigate(`/profile?search=password`)}}>Password</button>
                             </Tab>
 
                             <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
                                 <img src="/images/user.svg" />
-                                <button>Account Detail</button>
+                                <button onClick={()=>{navigate(`/profile?search=accountdetail`)}}>Account Detail</button>
                             </Tab>
 
                             <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
                                 <img src="/images/logout.svg" />
-                                <button>Logout</button>
+                                <button onClick={()=>{navigate(`/profile?search=logout`)}}>Logout</button>
                             </Tab>
 
                         </TabList>
