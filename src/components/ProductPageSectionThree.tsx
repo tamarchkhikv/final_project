@@ -1,33 +1,19 @@
-import React from "react";
+import React, { useEffect} from "react";
+import { setProducts } from "../store/app/productSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { ProductsData } from "../components/Data";
+import { RootState } from "../store/store";
 
-const products = [
-    {
-        img: "/images/image-1.png",
-        title: "Classic Monochrome Tees",
-        stock: "IN STOCK",
-        price: "$ 35.00",
-    },
-    {
-        img: "/images/image-2.png",
-        title: "Monochromatic Wardrobe",
-        stock: "STOCK OUT",
-        price: "$ 27.00",
-    },
-    {
-        img: "/images/image-3.png",
-        title: "Essential Neutrals",
-        stock: "IN STOCK",
-        price: "$ 22.00",
-    },
-    {
-        img: "/images/image-4.png",
-        title: "UTRAANET Black",
-        stock: "IN STOCK",
-        price: "$ 47.00",
-    },
-];
+
 
 const ProductPageSectionThree = () => {
+
+    const dispatch = useDispatch()
+    const products = useSelector((state: RootState) => state.product)
+    useEffect(() => {
+        dispatch(setProducts(ProductsData))
+    })
+
     return (
         <div className=" flex mx-auto max-w-[1092px] py-4 pb-[136px]">
             <div>
@@ -35,7 +21,7 @@ const ProductPageSectionThree = () => {
                 <h4 className="font-medium text-[12px] text-[#878A92] mt-2">SIMILAR PRODUCTS</h4>
 
                 <div className="grid grid-rows-1 grid-flow-col mx-auto max-w-[1092px] gap-10 mt-14 ">
-                    {products.map((product, index) => (
+                {products.products.slice(2, 6).map((product: any, index: any) => (
                         <div key={index}>
                             <div className="w-60 h-80 bg-neutral-100 rounded ">
                                 <img src={product.img} />
