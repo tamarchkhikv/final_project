@@ -131,7 +131,7 @@ const ProductPageSectionOne = () => {
 
 
                         </div>
-                        <div className="mt-10 flex items-center gap-4" onClick={(e) => handleAddToCart(e, products)}>
+                        <div className="mt-10 flex items-center gap-4 transform transition-transform duration-300 hover:scale-105" onClick={(e) => handleAddToCart(e, products)}>
                             <button className=" bg-black w-[285px] h-[44px] text-white rounded-[4px]">Add to cart</button>
                             <img src="/images/whishlist.svg" className="w-[43px] h-[43px]" />
 

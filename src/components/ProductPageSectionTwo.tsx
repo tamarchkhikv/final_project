@@ -10,16 +10,16 @@ const ProductPageSectionTwo = () => {
 
                     <TabList>
                         <div className="flex flex-col w-[241px] h-[98px] mt-[248px]">
-                            <Tab>
-                                <div className="flex items-center px-6 gap-[10px] h-[41px] active:bg-[#F6F6F6] outline-none">
+                            <Tab className='outline-none'>
+                                <div className="flex items-center px-6 gap-[10px] h-[41px] hover:bg-[#F6F6F6]">
                                     <img src='/images/more.svg' />
                                     <h3>Details</h3>
                                 </div>
                             </Tab>
 
 
-                            <Tab>
-                                <div className="flex items-center px-6 gap-[10px] h-[41px] active:bg-[#F6F6F6] ">
+                            <Tab className='outline-none'>
+                                <div className="flex items-center px-6 gap-[10px] h-[41px] hover:bg-[#F6F6F6] ">
                                     <img src='/images/empty-star.svg' />
                                     <h3>Reviews</h3>
                                 </div>
