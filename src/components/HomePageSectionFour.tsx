@@ -1,19 +1,39 @@
-import React,{useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
-import { setProducts } from "../store/app/productSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { ProductsData } from "../components/Data";
-import { RootState } from "../store/store";
+
 
 const HomePageSectionFour = () => {
-    const dispatch = useDispatch()
-    const products = useSelector((state: RootState) => state.product)
-    useEffect(() => {
-        dispatch(setProducts(ProductsData))
-    })
+    const [apiData, setApiData] = useState([])
+    const [loading, setLoading] = useState<boolean>(true);
 
-   
-     return (
+
+    const getData = async () => {
+        setLoading(true);
+        try {
+            const res = await fetch('https://fakestoreapi.com/products');
+
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data: any = await res.json();
+
+            setApiData(data);
+
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
+    useEffect(() => {
+        getData()
+    }, [])
+
+
+    return (
         <div className="mt-[152px] mb-[192px] max-w-[1116px] mx-auto">
             <TabGroup>
                 <TabList className="flex justify-center gap-6">
@@ -27,45 +47,57 @@ const HomePageSectionFour = () => {
 
                 </TabList>
                 <TabPanels>
-                    <TabPanel className="mt-[80px] grid grid-flow-col gap-10">
+                    <div>
+                        {loading ? (
+                            <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
+                        ) : (
+                            <TabPanel className="mt-[80px] grid grid-flow-col gap-10">
 
-                        {products.products.slice(4, 8).map((product:any, index:any) => (
-                            <div className="transform transition-transform duration-300
-                          hover:scale-105 cursor-pointer">
-                                <a key={index} href={`/${product.id}`}>
-                                    <img src={product.img} />
-                                    <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500">{product.title}</h4>
-                                    <div className="flex gap-4 mt-[14px]">
-                                        <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{product.stock}</div>
+                                {apiData.slice(12, 16).map((product: any, index: any) => (
+                                    <div className="transform transition-transform duration-300
+                          hover:scale-105 cursor-pointer w-[264px] h-[434px]">
+                                        <a key={index} href={`/${product.id}`}>
+                                            <img src={product.image} className="vw-[200px] h-[230px] mx-auto " />
+                                            <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center">{product.title}</h4>
+                                            <div className="flex justify-center gap-4 mt-[14px]">
+                                                <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{product.stock}</div>
 
-                                        <span className="text-[#474B57] font-normal text-sm ">{product.price}</span>
+                                                <span className="text-[#474B57] font-normal text-sm ">${product.price}</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </div>
 
-                        ))}
+                                ))}
 
-                    </TabPanel>
+                            </TabPanel>
+                        )}
+                    </div>
+                    <div>
+                        {loading ? (
+                            <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
+                        ) : (
 
-                    <TabPanel className="mt-[80px] grid grid-flow-col gap-10">
+                            <TabPanel className="mt-[80px] grid grid-flow-col gap-10">
 
-                        {products.products.slice(0, 4).map((product:any, index:any) => (
-                            <div className="transform transition-transform duration-300
-                          hover:scale-105 cursor-pointer">
-                                <a key={index} href={`/${product.id}`}>
-                                    <img src={product.img} />
-                                    <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500">{product.title}</h4>
-                                    <div className="flex gap-4 mt-[14px]">
-                                        <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{product.stock}</div>
+                                {apiData.slice(8, 12).map((product: any, index: any) => (
+                                    <div className="transform transition-transform duration-300
+                          hover:scale-105 cursor-pointer w-[264px] h-[434px]">
+                                        <a key={index} href={`/${product.id}`}>
+                                            <img src={product.image} className="w-[200px] h-[230px] mx-auto"/>
+                                            <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center">{product.title}</h4>
+                                            <div className="flex justify-center gap-4 mt-[14px]">
+                                                <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{product.stock}</div>
 
-                                        <span className="text-[#474B57] font-normal text-sm ">{product.price}</span>
+                                                <span className="text-[#474B57] font-normal text-sm "> $ {product.price}</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </div>
 
-                        ))}
+                                ))}
 
-                    </TabPanel>
+                            </TabPanel>
+                        )}
+                    </div>
                 </TabPanels>
             </TabGroup>
         </div >

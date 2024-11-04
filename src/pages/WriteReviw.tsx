@@ -69,7 +69,7 @@ const WriteReviw = () => {
             <img src="/images/5star.svg" className="mt-6" />
 
             {!isPending && <button className="mt-12 bg-black  w-[344px] text-white  h-[44px] rounded-[4px]  transform transition-transform duration-300 hover:scale-105">Submit Your Review</button>}
-            {isPending && <button disabled className="mt-12 bg-black  w-[344px] text-white  h-[44px] rounded-[4px]">Submit Your Review</button>}
+            {isPending && <button disabled className="mt-12 bg-black  w-[344px] text-white  h-[44px] rounded-[4px]">Submitted</button>}
 
 
         </form>

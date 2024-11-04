@@ -27,7 +27,7 @@ const NewsLetter = () => {
 
         }).
         then(()=>{
-            console.log("new subscriber added!")
+            alert("new subscriber added!")
             setIsPending(false);
             navigate('/')
         })
