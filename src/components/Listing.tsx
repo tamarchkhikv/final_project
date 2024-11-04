@@ -1,20 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import CustomPagination from "./CustomPagination";
-import { setProducts } from "../store/app/productSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { ProductsData } from "../components/Data";
-import { RootState } from "../store/store";
+
 
 
 
 const Listing = () => {
 
-    const dispatch = useDispatch()
-    const products = useSelector((state: RootState) => state.product)
-    
+    const [apiData, setApiData] = useState([])
+    const [loading, setLoading] = useState<boolean>(true);
+
+
+    const getData = async () => {
+        setLoading(true);
+        try {
+            const res = await fetch('https://fakestoreapi.com/products?limit=9');
+
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data: any = await res.json();
+
+            setApiData(data);
+
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
     useEffect(() => {
-        dispatch(setProducts(ProductsData))
-    })
+        getData()
+    }, [])
 
     return (
         <div className="w-[824px] ml-10">
@@ -46,14 +65,14 @@ const Listing = () => {
             </div>
 
 
-            <div className="grid grid-rows-3 grid-flow-col gap-10  mt-4">
-                {products.products.map((product: any, index: number) => (
+            <div className="grid grid-rows-3 grid-flow-col gap-10  mt-4 ">
+                {apiData.map((product: any, index: number) => (
                     <a key={index}
                         href={`/listing/${product.id}`}
                         className="transform transition-transform duration-300
-                    hover:scale-105 cursor-pointer">
+                    hover:scale-105 cursor-pointer w-[264px] h-[434px]">
                         <div className="w-60 h-80 bg-neutral-100 rounded">
-                            <img src={product.img} />
+                            <img src={product.image} className="w-[200px] h-[230px] m-auto"/>
                         </div>
                         <div>
                             <p className="font-medium text-sm mt-3  hover:text-gray-500">{product.title}</p>
@@ -62,7 +81,7 @@ const Listing = () => {
                                     {product.stock}
                                 </button>
                                 <div className="mt-3 ml-2 font-normal text-sm text-center">
-                                    {product.price}
+                                   $ {product.price}
                                 </div>
                             </div>
                         </div>
