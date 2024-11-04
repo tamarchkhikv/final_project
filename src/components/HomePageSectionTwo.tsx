@@ -1,17 +1,32 @@
-import React, { useEffect } from "react";
-import { setProducts } from "../store/app/productSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { ProductsData } from "../components/Data";
-import { RootState } from "../store/store";
+import React, { useEffect, useState } from "react";
+
 
 const HomePageSectionTwo = () => {
+    const [apiData, setApiData] = useState([])
 
 
-    const dispatch = useDispatch()
-    const products = useSelector((state: RootState) => state.product)
+    const getData = async () => {
+        try {
+            const res = await fetch('https://fakestoreapi.com/products?limit=4');
+
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data: any = await res.json();
+
+            setApiData(data);
+
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+
     useEffect(() => {
-        dispatch(setProducts(ProductsData))
-    })
+        getData()
+    }, [])
+
 
     const infoItems = [
         {
@@ -57,17 +72,17 @@ const HomePageSectionTwo = () => {
             </div>
 
             <div className="mt-[80px] grid grid-flow-col gap-10 ">
-                {products.products.slice(2, 6).map((product: any, index: any) => (
+                {apiData.map((product: any, index: any) => (
                     <div className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer">
                         <a
                             key={index} href={`/${product.id}`}>
-                            <img src={product.img} />
+                            <img className="w-[237px] h-[312px]"src={product.image} />
                             <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500">{product.title}</h4>
                             <div className="flex gap-4 mt-[14px]">
                                 <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{product.stock}</div>
 
-                                <span className="text-[#474B57] font-normal text-sm ">{product.price}</span>
+                                <span className="text-[#474B57] font-normal text-sm ">{`$ ${product.price}`}</span>
                             </div>
                         </a>
                     </div>
