@@ -4,23 +4,43 @@ import Radio, { radioClasses } from '@mui/joy/Radio';
 import RadioGroup from '@mui/joy/RadioGroup';
 import Sheet from '@mui/joy/Sheet';
 import MinimumDistanceSlider from "./RangeSlider";
+import { useState, useEffect } from "react";
 
 const Categories = () => {
+    const [apiData, setApiData] = useState([])
+    const [loading, setLoading] = useState<boolean>(true);
 
-    const variants = [
-        "Perfume",
-        "Trousers",
-        "Shoe",
-        "Handbag",
-        "Hat",
-        "Thermos",
-    ];
+    const getData = async () => {
+        setLoading(true);
+        try {
+            const res = await fetch('https://fakestoreapi.com/products/categories');
+
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data: any = await res.json();
+
+            setApiData(data);
+
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
+    useEffect(() => {
+        getData()
+    }, [])
+
 
     return (
         <div className="w-[248px] h-[828px] px-3 pt-6 pb-8 border-[1px] border-[#E6E7E8]">
             <h2 className="font-medium text-sm text-[#0E1422]">Categories</h2>
             <ul className="mt-4">
-                {variants.map((variant, index) => (
+                {apiData.map((variant, index) => (
                     <div key={index} className="flex px-1 py-3 gap-2 border-b-[1px] border-[#E9E9EB]">
                         <input type='checkbox'></input>
                         <li className="font-normal text-sm text-[#474B57] ">{variant}</li>
