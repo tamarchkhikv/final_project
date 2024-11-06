@@ -60,7 +60,13 @@ const HomePageSectionFour = () => {
                                             <img src={product.image} className="vw-[200px] h-[230px] mx-auto " />
                                             <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center">{product.title}</h4>
                                             <div className="flex justify-center gap-4 mt-[14px]">
-                                                <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{product.stock}</div>
+                                                <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">
+                                                    {product.rating.count === 0
+                                                        ? "out of stock"
+                                                        : product.rating.count < 5
+                                                            ? "low stock"
+                                                            : "in stock"}
+                                                </div>
 
                                                 <span className="text-[#474B57] font-normal text-sm ">${product.price}</span>
                                             </div>
@@ -83,10 +89,16 @@ const HomePageSectionFour = () => {
                                     <div className="transform transition-transform duration-300
                           hover:scale-105 cursor-pointer w-[264px] h-[434px]">
                                         <a key={index} href={`/${product.id}`}>
-                                            <img src={product.image} className="w-[200px] h-[230px] mx-auto"/>
+                                            <img src={product.image} className="w-[200px] h-[230px] mx-auto" />
                                             <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center">{product.title}</h4>
                                             <div className="flex justify-center gap-4 mt-[14px]">
-                                                <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">{product.stock}</div>
+                                                <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">
+                                                    {product.rating.count === 0
+                                                        ? "out of stock"
+                                                        : product.rating.count < 5
+                                                            ? "low stock"
+                                                            : "in stock"}
+                                                </div>
 
                                                 <span className="text-[#474B57] font-normal text-sm "> $ {product.price}</span>
                                             </div>

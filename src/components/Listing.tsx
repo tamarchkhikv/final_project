@@ -71,17 +71,21 @@ const Listing = () => {
                         href={`/listing/${product.id}`}
                         className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer w-[264px] h-[434px]">
-                        <div className="w-60 h-80 bg-neutral-100 rounded">
-                            <img src={product.image} className="w-[200px] h-[230px] m-auto"/>
+                        <div className="w-60 h-80 rounded">
+                            <img src={product.image} className="w-[200px] h-[230px] mx-auto" />
                         </div>
                         <div>
                             <p className="font-medium text-sm mt-3  hover:text-gray-500">{product.title}</p>
                             <div className="flex items-center  mt-2 ">
                                 <button className="bg-white text-center w-20 h-7 rounded-full border text-xs font-medium mt-3 items-center">
-                                    {product.stock}
+                                    {product.rating.count === 0
+                                        ? "out of stock"
+                                        : product.rating.count < 5
+                                            ? "low stock"
+                                            : "in stock"}
                                 </button>
                                 <div className="mt-3 ml-2 font-normal text-sm text-center">
-                                   $ {product.price}
+                                    $ {product.price}
                                 </div>
                             </div>
                         </div>

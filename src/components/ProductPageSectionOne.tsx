@@ -127,7 +127,11 @@ const ProductPageSectionOne = () => {
                                     <span className="font-medium text-[12px] text-[#5C5F6A]">4.2 — 54 Reviews </span>
 
                                 </div>
-                                <button className="w-[95px] px-4 py-[2px] h-7 border-[1px] rounded-[100px] text-[#5C5F6A] text-[12px] font-medium">IN STOCK</button>
+                                <button className="w-[95px] px-4 py-[2px] h-7 border-[1px] rounded-[100px] text-[#5C5F6A] text-[12px] font-medium"> {dataDetails.rating.count === 0
+                                                ? "out of stock"
+                                                : dataDetails.rating.count < 5
+                                                    ? "low stock"
+                                                    : "in stock"}</button>
 
                             </div>
 
