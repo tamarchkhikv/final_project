@@ -23,7 +23,7 @@ const FooterWhite = () => {
 
                 </div>
 
-                <div className="flex gap-[72px] ml-[98px] mt-[74px]">
+                <div className="flex gap-[50px] ml-[98px] mt-[74px]">
                     <div>
                         <h3 className="font-medium text-[#878A92] text-sm">SUPPORT</h3>
                         <div className="flex flex-col mt-10 gap-4">
@@ -33,11 +33,11 @@ const FooterWhite = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className="font-medium text-[#878A92] text-sm">COMPANY</h3>
+                        <h3 className="font-medium text-[#878A92] text-sm">Authentication</h3>
                         <div className="flex flex-col mt-10 gap-4">
-                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4">Cart</a>
-                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4">Contact</a>
-                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4">Careers</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4" href="/signup">Sign Up</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4" href="/forgotpassword">Forgot Password</a>
+                            <a className="font-medium text-sm text-[#717171] hover:underline underline-offset-4" href="resetpassword">Reset Password</a>
                         </div>
                     </div>
                     <div>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DropDown from "./DropDown";
-// import BurgerMenu from "./BurgerMenu";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -31,14 +30,14 @@ const Header = () => {
                 <img src="/images/logomark.png" />
                 <h2 className="font-extrabold text-xl text-[#0E1422] hover:text-gray-500">Ecommerce</h2>
             </a>
-            {/* <BurgerMenu/> */}
+
             <nav className="flex gap-8 ">
                 <Link to='/' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Home</Link>
                 <DropDown />
 
 
                 <Link to='/listing' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Listing</Link>
-                <Link to='/checkout' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Checkout</Link>
+                <Link to='/login' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Login</Link>
             </nav>
             <div className="flex items-center gap-8 relative">
                 <form onSubmit={onSubmit}

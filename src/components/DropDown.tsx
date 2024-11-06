@@ -6,7 +6,7 @@ const DropDown = () => {
   return (
     <Menu>
       <MenuButton className='flex gap-2 hover:underline underline-offset-4'>
-        <h3 className='font-medium text-sm text-[#5C5F6A]'>Authentication</h3>
+        <h3 className='font-medium text-sm text-[#5C5F6A]'>Categories</h3>
         <img src='/images/drop-down.png' />
       </MenuButton>
       <MenuItems anchor="bottom">
