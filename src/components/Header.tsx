@@ -29,7 +29,7 @@ const Header = () => {
         <div className="flex items-center justify-between max-w-[1116px] mx-auto  border-b-[1px] py-5 bg-white">
             <a className="flex items-center gap-2" href='/'>
                 <img src="/images/logomark.png" />
-                <h2 className="font-extrabold text-xl text-[#0E1422]">Ecommerce</h2>
+                <h2 className="font-extrabold text-xl text-[#0E1422] hover:text-gray-500">Ecommerce</h2>
             </a>
             {/* <BurgerMenu/> */}
             <nav className="flex gap-8 ">

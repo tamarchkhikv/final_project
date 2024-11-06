@@ -104,7 +104,7 @@ const ProductPageSectionOne = () => {
                         <MySwiper
                             pagination={{ clickable: true }}
                             modules={[Pagination]}
-                            className="h-[574px] w-[534px] bg-[#F6F6F6] "
+                            className="h-[574px] w-[534px] border border-gray-100 rounded-md shadow-lg"
                         >
                             {Array.from({ length: 4 }, (_, index) => (
                                 <SwiperSlide

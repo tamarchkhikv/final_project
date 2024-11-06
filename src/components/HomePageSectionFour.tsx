@@ -51,7 +51,7 @@ const HomePageSectionFour = () => {
                         {loading ? (
                             <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
                         ) : (
-                            <TabPanel className="mt-[80px] grid grid-flow-col gap-10">
+                            <TabPanel className="mt-[80px] grid grid-flow-col gap-10" data-aos="flip-down">
 
                                 {apiData.slice(12, 16).map((product: any, index: any) => (
                                     <div className="transform transition-transform duration-300
@@ -83,7 +83,8 @@ const HomePageSectionFour = () => {
                             <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
                         ) : (
 
-                            <TabPanel className="mt-[80px] grid grid-flow-col gap-10">
+                            <TabPanel className="mt-[80px] grid grid-flow-col gap-10" data-aos="flip-down" >
+                            
 
                                 {apiData.slice(8, 12).map((product: any, index: any) => (
                                     <div className="transform transition-transform duration-300

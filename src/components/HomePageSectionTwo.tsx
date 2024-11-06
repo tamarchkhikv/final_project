@@ -53,10 +53,12 @@ const HomePageSectionTwo = () => {
     ]
     return (
         <div className="pt-[88px] pb-[168px] max-w-[1092px] mx-auto">
-            <div className="grid grid-cols-3 gap-[54px]">
+            <div className="grid grid-cols-3 gap-[54px]" 
+            data-aos="flip-up"
+            >
                 {infoItems.map((item, index) => (
                     <div key={index} className=" h-[218px] px-4 shadow-md transform transition-transform duration-300
-                 hover:scale-105 cursor-pointer" >
+                 hover:scale-105 cursor-pointer">
 
                         <img src={item.icon} className="mt-4" />
                         <h1 className="font-semibold text-base mt-6">{item.title}</h1>
@@ -78,7 +80,7 @@ const HomePageSectionTwo = () => {
                 {loading ? (
                     <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
                 ) : (
-                    <div className="mt-[80px] grid grid-flow-col gap-10 ">
+                    <div className="mt-[80px] grid grid-flow-col gap-10 " data-aos="flip-up">
                         {apiData.map((product: any, index: any) => (
                             <div className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer w-[264px] h-[434px]">
