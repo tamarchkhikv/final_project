@@ -26,10 +26,10 @@ const Header = () => {
     return (
 
         <div className="flex items-center justify-between max-w-[1116px] mx-auto  border-b-[1px] py-5 bg-white">
-            <a className="flex items-center gap-2" href='/'>
+            <Link to="/" className="flex items-center gap-2">
                 <img src="/images/logomark.png" />
                 <h2 className="font-extrabold text-xl text-[#0E1422] hover:text-gray-500">Ecommerce</h2>
-            </a>
+            </Link>
 
             <nav className="flex gap-8 ">
                 <Link to='/' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Home</Link>

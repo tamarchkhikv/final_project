@@ -1,5 +1,6 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 
 
 const DropDown = () => {
@@ -50,9 +51,10 @@ const DropDown = () => {
 
               <MenuItem key={index}>
 
-                <a className="block data-[focus]:bg-gray-200 w-[140px]" href={`/listing/${item}`}>
+                <Link to ={`/listing/${item}`}
+                className="block data-[focus]:bg-gray-200 w-[140px]" >
                   {item}
-                </a>
+                </Link>
 
               </MenuItem>
             ))}
