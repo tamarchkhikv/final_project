@@ -1,6 +1,40 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import React from "react"
+import React, { useState, useEffect } from "react";
+
+
 const DropDown = () => {
+
+  const [apiData, setApiData] = useState([])
+
+
+  const getData = async () => {
+
+    try {
+      const res = await fetch('https://fakestoreapi.com/products/categories');
+
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data: any = await res.json();
+
+      setApiData(data);
+
+    } catch (error) {
+      console.error(error);
+     
+    }
+    
+  }
+
+
+    useEffect(() => {
+      getData()
+    
+    }, [])
+
+    
+  
 
 
   return (
@@ -11,33 +45,23 @@ const DropDown = () => {
       </MenuButton>
       <MenuItems anchor="bottom">
         <div className='border-[1px] px-2 py-1 bg-gray-100'>
-          <MenuItem >
+          {apiData.map(
+            (item, index) => (
 
-            <a className="block data-[focus]:bg-gray-200 w-[140px]" href="login">
-              Login
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a className="block data-[focus]:bg-gray-200 w-[140px]" href="/signup">
-              Sign Up
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a className="block data-[focus]:bg-gray-200 w-[140px]" href="/forgotpassword">
-              Forgot Password
-            </a>
+              <MenuItem key={index}>
 
-          </MenuItem>
-          <MenuItem>
-            <a className="block data-[focus]:bg-gray-200 w-[140px]" href="/resetpassword">
-              Reset Password
-            </a>
+                <a className="block data-[focus]:bg-gray-200 w-[140px]" href={`/listing?category=${item}`}>
+                  {item}
+                </a>
 
-          </MenuItem>
+              </MenuItem>
+            ))}
+
         </div>
       </MenuItems>
     </Menu >
   )
+
 }
 
 

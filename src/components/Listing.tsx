@@ -73,13 +73,13 @@ const Listing = () => {
                             <a key={index}
                                 href={`/listing/${product.id}`}
                                 className="transform transition-transform duration-300
-                    hover:scale-105 cursor-pointer w-[264px] h-[434px]">
-                                <div className="w-60 h-80 rounded">
-                                    <img src={product.image} className="w-[200px] h-[230px] mx-auto" />
+                    hover:scale-105 cursor-pointer w-[264px] h-[434px] border rounded-md shadow-md">
+                                <div className="w-60 h-72 rounded">
+                                    <img src={product.image} className="w-[200px] h-[200px] mx-auto mt-5" />
                                 </div>
                                 <div>
-                                    <p className="font-medium text-sm mt-3  hover:text-gray-500">{product.title}</p>
-                                    <div className="flex items-center  mt-2 ">
+                                    <p className="font-medium text-sm mt-3  hover:text-gray-500 text-center">{product.title}</p>
+                                    <div className="flex justify-center items-center  mt-2 ">
                                         <button className="bg-white text-center w-20 h-7 rounded-full border text-xs font-medium mt-3 items-center">
                                             {product.rating.count === 0
                                                 ? "out of stock"
