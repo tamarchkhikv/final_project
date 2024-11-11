@@ -50,7 +50,7 @@ const DropDown = () => {
 
               <MenuItem key={index}>
 
-                <a className="block data-[focus]:bg-gray-200 w-[140px]" href={`/listing?category=${item}`}>
+                <a className="block data-[focus]:bg-gray-200 w-[140px]" href={`/listing/${item}`}>
                   {item}
                 </a>
 

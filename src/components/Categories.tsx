@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Field, Label, Radio, RadioGroup } from '@headlessui/react'
 import Colors from "../components/Colors";
 import Sizes from "../components/Sizes";
+import { useNavigate } from 'react-router-dom'
 
 
 const Categories = () => {
@@ -38,7 +39,16 @@ const Categories = () => {
         getData()
     }, [])
 
+    const [value, setValue] = useState<string>("");
 
+
+    const navigate = useNavigate();
+
+    const onClickCategory = (item: any) => {
+        console.log(item)
+        navigate(`/listing/${item}`);
+
+    } 
 
     return (
         <div className="w-[248px] h-[828px] px-3 pt-6 pb-8 border-[1px] border-[#E6E7E8]">
@@ -48,16 +58,18 @@ const Categories = () => {
             ) : (
                 <ul className="mt-4">
 
-                    <RadioGroup aria-label="Server size">
-                        {apiData.map((variant, index) => (
-                            <Field key={variant} className="flex gap-2 px-1 py-3  border-b-[1px] border-[#E9E9EB]">
+                    <RadioGroup aria-label="Server size" onChange={onClickCategory}>
+                        {apiData.map((item) => (
+                            <Field key={item} className="flex gap-2 px-1 py-3  border-b-[1px] border-[#E9E9EB]"
+                            >
                                 <Radio
-                                    value={variant}
+                                    value={item}
                                     className="group flex size-5 items-center justify-center rounded-full border bg-white data-[checked]:bg-gray-400"
                                 >
                                     <span className="invisible size-2 rounded-full bg-white group-data-[checked]:visible" />
+
                                 </Radio>
-                                <Label>{variant}</Label>
+                                <Label>{item}</Label>
                             </Field>
                         ))}
                     </RadioGroup>

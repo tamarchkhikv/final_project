@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CustomPagination from "./CustomPagination";
-
+import { useParams } from "react-router-dom";
 
 
 
@@ -8,12 +8,33 @@ const Listing = () => {
 
     const [apiData, setApiData] = useState([])
     const [loading, setLoading] = useState<boolean>(true);
-
+    const {category}: any = useParams()
 
     const getData = async () => {
         setLoading(true);
         try {
-            const res = await fetch('https://fakestoreapi.com/products?limit=9');
+            const res = await fetch('https://fakestoreapi.com/products');
+
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data: any = await res.json();
+
+            setApiData(data);
+
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
+    const getDatabyCategory = async () => {
+        setLoading(true);
+        try {
+            const res = await fetch(`https://fakestoreapi.com/products/category/${category}`);
 
             if (!res.ok) {
                 throw new Error('Network response was not ok');
@@ -32,8 +53,13 @@ const Listing = () => {
 
 
     useEffect(() => {
-        getData()
-    }, [])
+        if(category){
+            getDatabyCategory()
+        }else{
+            getData()
+        }
+ 
+    }, [category])
 
     return (
         <div className="w-[824px] ml-10">
