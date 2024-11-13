@@ -1,7 +1,53 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import GoogleButton from "./GoogleButton";
+import Cookies from "js-cookie";
+
 
 const LoginSectionTwo = () => {
+    const [userName, setUserName] = useState("")
+    const [password, setPassword] = useState("")
+    const [isLoading, setIsLoading] = useState(false)
+
+    const onSubmitForm = (e: any) => {
+
+        e.preventDefault();
+
+        setIsLoading(true);
+
+        fetch('https://fakestoreapi.com/auth/login', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: userName,
+                password: password
+            })
+
+        })
+            .then(res => res.json())
+            .then(json => {
+                Cookies.set("AccessToken", json.token)
+                setIsLoading(false)
+                alert("Log in successfully")
+            })
+            .catch(err => {
+
+                setIsLoading(false)
+                alert("User not found")
+
+            })
+    }
+
+
+    const onUserNameChange = (e: any) => {
+        setUserName(e.target.value)
+    }
+    const onUserPasswordChange = (e: any) => {
+        setPassword(e.target.value)
+    }
+
     return (
         <div className="flex justify-center mt-32 mb-[148px]">
             <div className="w-[320px]">
@@ -14,23 +60,25 @@ const LoginSectionTwo = () => {
 
 
                 </div>
+                <form onSubmit={onSubmitForm}>
+                    <div className="flex flex-col mt-[34px]">
+                        <label>Email</label>
+                        <input type='text' onChange={onUserNameChange} className=" w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
+                    </div>
+                    <div className="flex flex-col mt-[15px]">
+                        <label>Password</label>
+                        <input type="password" onChange={onUserPasswordChange} className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
+                    </div>
 
-                <div className="flex flex-col mt-[34px]">
-                    <label>Email</label>
-                    <input type='email' className=" w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
-                </div>
-                <div className="flex flex-col mt-[15px]">
-                    <label>Password</label>
-                    <input type="password" className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
-                </div>
+                    <a className="flex justify-end mt-4 font-medium text-[#555555] text-[12px]">Forgot Password?</a>
 
-                <a className= "flex justify-end mt-4 font-medium text-[#555555] text-[12px]">Forgot Password?</a>
+                    <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm">
+                        {isLoading ? 'loading...' : 'Login'}</button>
 
-                <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm">Login</button>
 
-                <a className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6">Don't have an account? Sign up</a>
+                    <a className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6">Don't have an account? Sign up</a>
 
-               
+                </form>
 
             </div>
 
@@ -39,3 +87,7 @@ const LoginSectionTwo = () => {
     )
 }
 export default LoginSectionTwo;
+
+function setPassword(value: any) {
+    throw new Error("Function not implemented.");
+}
