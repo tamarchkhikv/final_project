@@ -33,7 +33,7 @@ const SignUpSectionTwo= () => {
                 <a className= "flex mt-4 font-medium text-[#555555] text-[12px]">By creating an account you agree with our Terms of Service, Privacy Policy,
                 </a>
 
-                <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm">Create account</button>
+                <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm  hover:bg-gray-700 transform transition-transform duration-300 hover:scale-105">Create account</button>
 
                 <a className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6">Already have an account? Log in</a>
 

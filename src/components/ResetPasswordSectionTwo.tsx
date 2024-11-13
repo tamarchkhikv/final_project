@@ -17,7 +17,7 @@ const ResetPasswordSectionTwo= () => {
 
                 
 
-                <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-10 text-sm">Reset password</button>
+                <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-10 text-sm ">Reset password</button>
 
                
 

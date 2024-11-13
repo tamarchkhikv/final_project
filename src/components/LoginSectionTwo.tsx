@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GoogleButton from "./GoogleButton";
 import Cookies from "js-cookie";
+import { Link } from 'react-router-dom'
 
 
 const LoginSectionTwo = () => {
@@ -37,6 +38,9 @@ const LoginSectionTwo = () => {
                 setIsLoading(false)
                 alert("User not found")
 
+                
+            }).finally(()=> {
+               window.location.reload()
             })
     }
 
@@ -70,13 +74,15 @@ const LoginSectionTwo = () => {
                         <input type="password" onChange={onUserPasswordChange} className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
                     </div>
 
-                    <a className="flex justify-end mt-4 font-medium text-[#555555] text-[12px]">Forgot Password?</a>
+                    <Link to="/forgotpassword"
+                    className="flex justify-end mt-4 font-medium text-[#555555] text-[12px] hover:text-red-800">Forgot Password?</Link>
 
-                    <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm">
+                    <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm  hover:bg-gray-700 transform transition-transform duration-300 
+                    hover:scale-105">
                         {isLoading ? 'loading...' : 'Login'}</button>
 
 
-                    <a className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6">Don't have an account? Sign up</a>
+                    <Link to ="/signup" className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6  hover:text-red-800">Don't have an account? Sign up</Link>
 
                 </form>
 
@@ -88,6 +94,4 @@ const LoginSectionTwo = () => {
 }
 export default LoginSectionTwo;
 
-function setPassword(value: any) {
-    throw new Error("Function not implemented.");
-}
+

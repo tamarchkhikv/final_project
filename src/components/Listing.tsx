@@ -94,10 +94,10 @@ const Listing = () => {
                 {loading ? (
                     <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
                 ) : (
-                    <div className="grid grid-rows-3 grid-flow-col gap-10  mt-4 ">
+                    <div className="grid grid-cols-3 gap-10  mt-4 ">
                         {apiData.map((product: any, index: number) => (
                             <a key={index}
-                                href={`/listing/${product.id}`}
+                                href={`/${product.id}`}
                                 className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer w-[264px] h-[434px] border rounded-md shadow-md">
                                 <div className="w-60 h-72 rounded">

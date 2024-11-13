@@ -6,11 +6,11 @@ import Cookies from "js-cookie";
 
 
 
+
 const Header = () => {
     const [value, setValue] = useState<string>("");
 
 
-    const navigate = useNavigate();
 
     const onChangeSearch = (e: any) => {
         setValue(e.target.value);
@@ -22,12 +22,21 @@ const Header = () => {
         navigate(`/listing?search=${value}`);
 
     }
-     const logOut = ()=>{
+    const logOut = () => {
         Cookies.remove("AccessToken")
+        window.location.reload()
         alert("Logged out successfully");
-     }
+
+    }
+
+    const navigate = useNavigate();
+
 
     const products = useSelector((state: any) => state.cart.products)
+
+    const isAuth = Cookies.get('AccessToken')
+
+
     return (
 
         <div className="flex items-center justify-between max-w-[1116px] mx-auto  border-b-[1px] py-5 bg-white">
@@ -42,7 +51,7 @@ const Header = () => {
 
 
                 <Link to='/listing' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Listing</Link>
-                <Link to='/login' className="font-medium text-sm text-[#5C5F6A] hover:underline underline-offset-4">Login</Link>
+                
             </nav>
             <div className="flex items-center gap-8 relative">
                 <form onSubmit={onSubmit}
@@ -60,9 +69,15 @@ const Header = () => {
                     <Link to='/profile'>
                         <img src='/images/user-1.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
                     </Link>
-                    <button onClick={logOut}>
-                        <img src='/images/logout.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
-                    </button>
+
+                    {isAuth ? (
+                        <button onClick={logOut}>
+                            <img src='/images/logout.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
+                        </button>
+                    ) : <button onClick={() => { navigate(`/login`) }}>
+                        <img src='/images/login.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
+                    </button>}
+
                 </div>
             </div>
 
