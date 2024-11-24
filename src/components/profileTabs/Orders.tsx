@@ -29,7 +29,7 @@ const Orders = () => {
             <div className='mt-6'>
                 {productArray.map((product: any, key: any) => (
 
-                    <div key={key} className="flex items-center py-8 border-b-[1px]">
+                    <div key={key} className="flex items-center py-8 px-4 border-b-[1px] hover:bg-[#F6F6F6]">
                         <img src={product.img} />
                         <div className="ml-8 ">
                             <h2 className="font-medium text-sm text-[#0E1422]">{product.title}</h2>
@@ -42,7 +42,7 @@ const Orders = () => {
                             <span>Processing</span>
                         </div>
 
-                        <button className="border-[1px] border-[#0E1422] rounded-[4px] ml-8 px-6 py-3">View item</button>
+                        <button className="border-[1px] border-[#0E1422] rounded-[4px] ml-8 px-6 py-3 transform transition-transform duration-300 hover:scale-105">View item</button>
                     </div>
 
 
