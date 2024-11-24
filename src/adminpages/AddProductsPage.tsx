@@ -1,148 +1,130 @@
-import React from "react";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
-import Orders from "../adminpagescomponenets/Orders";
-import Dashboard from "../adminpagescomponenets/Dashboard";
-import Customers from "../adminpagescomponenets/Customers";
-import Reviews from "../adminpagescomponenets/Reviews";
-import Settings from "../adminpagescomponenets/Settings";
-import AddProducts from "../adminpagescomponenets/AddProducts";
+import React from 'react'
+import { useState } from 'react';
+import Cookies from "js-cookie";
+
 
 
 
 
 const AddProductsPage = () => {
 
+    const [title, setTitle] = useState("")
+    const [price, setPrice] = useState("")
+    const [description, setDiscription] = useState("")
+    const [category, setCategory] = useState("")
+    const [image, setImage] = useState("")
+
+    const [isLoading, setIsLoading] = useState(false)
+
+    const onSubmitForm = (e: any) => {
+
+        e.preventDefault();
+
+        setIsLoading(true);
+
+        fetch('https://fakestoreapi.com/products', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title: 'test product',
+                price: 13.5,
+                description: 'lorem ipsum set',
+                image: 'https://i.pravatar.cc',
+                category: 'electronic'
+            })
+
+        })
+            .then(res => res.json())
+            .then(json => {
+                Cookies.set("AccessJson", json)
+                setIsLoading(false)
+                alert("Product Add successfully")
+                console.log(json)
+            })
+            .catch(err => {
+
+                setIsLoading(false)
+                alert("User not found")
+
+
+
+            })
+           
+    }
+
+
+    const onProductTitle = (e: any) => {
+        setTitle(e.target.value)
+    }
+    const onProductPrice = (e: any) => {
+        setPrice(e.target.value)
+    }
+    const onProductDescription = (e: any) => {
+        setDiscription(e.target.value)
+    }
+    const onProductCategory = (e: any) => {
+        setCategory(e.target.value)
+    }
+    const onProductImage = (e: any) => {
+        setImage(e.target.value)
+    }
+
 
     return (
+        <div className='flex justify-center'>
 
 
-
-        <TabGroup>
-            <div className="max-w-[1440px] mx-auto">
-                <div className="flex">
-                    <div className="w-[260px] h-[925px] mt-4 pb-[359px]">
-                        <img src='/images/adminlogo.svg' className="w-[116px] h-10 mx-auto" />
-
-
-
-                        <TabList>
-                            <div className="flex flex-col mx-auto mt-16 gap-4 w-[212px] ml-4">
-
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/dashboard.svg" />
-                                        <button>Dashboard</button>
-                                    </div>
-
-                                </Tab>
-
-
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/product.svg" />
-                                        <button>Products</button>
-                                    </div>
-
-                                </Tab>
-
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/cart.svg" />
-                                        <button>Orders</button>
-                                    </div>
-
-                                </Tab>
-
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/users.svg" />
-                                        <button>Customers</button>
-                                    </div>
-
-                                </Tab>
-
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/emptystar.svg" />
-                                        <button>Reviews</button>
-                                    </div>
-
-                                </Tab>
-
-                                <Tab>
-                                    <div className="flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
-                                        <img src="/images/settings.svg" />
-                                        <button>Settings</button>
-                                    </div>
-
-                                </Tab>
-                                <div className="pt-8 flex gap-[10px] px-6 py-2 ml-4 border-t-[1px] mt-[46px]">
-                                    <img src='/images/add.svg' />
-                                    <button>Extras</button>
-
-                                </div>
-
-
-                            </div>
-                        </TabList>
-                    </div>
-
-
-
-                    <div className="bg-[#E9E9EB] w-[1180px] ">
-                        <TabPanels>
-
-
-                            <TabPanel>
-                                <Dashboard />
-
-                            </TabPanel>
-
-                            <TabPanel>
-
-                                <AddProducts />
-
-                            </TabPanel>
-
-
-                            <TabPanel>
-                                <Orders />
-
-                            </TabPanel>
-
-                            <TabPanel>
-
-                                <Customers />
-                            </TabPanel>
-
-
-
-                            <TabPanel>
-                                <Reviews />
-                            </TabPanel>
-
-                            <TabPanel>
-                                <Settings />
-                            </TabPanel>
-
-                        </TabPanels>
-                    </div>
-
+            <div className="w-[500px] h-[885px] bg-white ml-[47px] ">
+                <div className="py-8 border-b-[1px] border-[#E9E9EB]">
+                    <h1 className="ml-[47px] font-medium text-[18px] text-[#0E1422]">Add Product</h1>
                 </div>
+                <form onSubmit={onSubmitForm}>
 
-            </div >
+                    <div className="ml-12 flex flex-col gap-4 mt-10">
+                        <div className="flex flex-col">
+                            <label className='font-medium text-sm text-[#474B57]'>Title</label>
+                            <input onChange={onProductTitle} type='text' className='mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
+                        </div>
+                        <div className="flex  flex-col">
+                            <label className='font-medium text-sm text-[#474B57]'>Price</label>
+                            <input onChange={onProductPrice} type='text' className=' mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
+                        </div>
+                        <div className="flex  flex-col">
+                            <label className='font-medium text-sm text-[#474B57]'>Category</label>
+                            <input onChange={onProductCategory} type='text' className='mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
+                        </div>
 
-        </TabGroup >
+                        <div className="flex  flex-col">
+                            <label className='font-medium text-sm text-[#474B57]'>Description</label>
+                            <textarea onChange={onProductDescription} className=' mt-2 w-80 h-[128px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></textarea>
+                        </div>
+                        <div className="flex  flex-col">
+                            <label className='font-medium text-sm text-[#474B57]'>Images</label>
+                            <div className='mt-2 flex gap-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px]'>
+                                <img src='/images/upload.svg' />
+                                <input type="text" onChange={onProductImage} className=" font-medium text-[#878A92] text-sm"></input>
+                            </div>
+
+                        </div>
+                        <button className='bg-black text-white w-[144px] h-11 py-3 px-6 rounded-[4px] text-sm mt-[51px]' >Save Product</button>
+                    </div>
+                </form>
 
 
 
 
+
+            </div>
+
+
+        </div>
 
 
 
     )
 }
 
-
-
-export default AddProductsPage
+export default AddProductsPage;

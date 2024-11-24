@@ -112,7 +112,7 @@ const AdminProducts = () => {
         <div className='flex justify-between items-center px-12 '>
           <h2 className='font-medium text-[18px]'>Products</h2>
           <div className='flex gap-4'>
-            <a href='/addproducts'>
+            <a href='/addproductsPage'>
               <button className='bg-[#0E1422] px-5 text-white  h-10 rounded'>Add product</button>
             </a>
             <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2'>
