@@ -59,7 +59,7 @@ const CheckoutSectionTwo = () => {
                         <img src='/images/checkout-image3.png' />
                     </div>
 
-                    <button className="px-6 py-3 rounded-[4px] border-[1px] border-[#B6B7BC]">Edit Cart</button>
+                    <button className="px-6 py-3 rounded-[4px] border-[1px] border-[#B6B7BC] transform transition-transform duration-300 hover:scale-105">Edit Cart</button>
                 </div>
 
                 <div className="flex justify-between mt-16">
@@ -80,7 +80,7 @@ const CheckoutSectionTwo = () => {
                     <span className="font-medium text-sm text-[#0E1422]">$ 78.00</span>
                 </div>
                 <a href='payment'>
-                    <button className="w-[372px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8">Place Order</button>
+                    <button className="w-[372px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8 transform transition-transform duration-300 hover:scale-105">Place Order</button>
                 </a>
 
 

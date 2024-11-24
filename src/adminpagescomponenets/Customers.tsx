@@ -98,10 +98,10 @@ const Customers = () => {
       </div>
       <div className=' max-w-[1069px] h-[922px] mx-auto bg-white mt-16 pt-6 rounded'>
         <div className='flex justify-between items-center px-12 '>
-          <h2 className='font-medium text-[18px]'>Products</h2>
+          <h2 className='font-medium text-[18px]'>Customers</h2>
 
 
-          <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2'>
+          <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2 transform transition-transform duration-300 hover:scale-105'>
             <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
             <input placeholder='Search customers' className='w-[140px] outline-none'></input>
           </div>

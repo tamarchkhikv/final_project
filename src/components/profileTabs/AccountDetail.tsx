@@ -13,7 +13,7 @@ const AccountDetail = () => {
                 <label>Email</label>
                 <input type='email' className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px] outline-none"></input>
             </div>
-            <button className='w-36 h-11 rounded-[4px] bg-black text-white py-3 text-sm mt-16'>Save Changes</button>
+            <button className='w-36 h-11 rounded-[4px] bg-black text-white py-3 text-sm mt-16 transform transition-transform duration-300 hover:scale-105'>Save Changes</button>
         </div>
 
     )

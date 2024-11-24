@@ -113,9 +113,9 @@ const AdminProducts = () => {
           <h2 className='font-medium text-[18px]'>Products</h2>
           <div className='flex gap-4'>
             <a href='/addproductsPage'>
-              <button className='bg-[#0E1422] px-5 text-white  h-10 rounded'>Add product</button>
+              <button className='bg-[#0E1422] px-5 text-white  h-10 rounded transform transition-transform duration-300 hover:scale-105'>Add product</button>
             </a>
-            <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2'>
+            <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2 transform transition-transform duration-300 hover:scale-105'>
               <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
               <input placeholder='Search products' className='w-[130px] outline-none'></input>
             </div>

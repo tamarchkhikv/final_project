@@ -40,7 +40,7 @@ const Settings = () => {
 
         </div>
 
-        <button className='bg-black text-white w-[144px] h-11 py-3 px-6 rounded-[4px] text-sm mt-[74px] ml-12' >Save Changes</button>
+        <button className='bg-black text-white w-[144px] h-11 py-3 px-6 rounded-[4px] text-sm mt-[74px] ml-12 transform transition-transform duration-300 hover:scale-105' >Save Changes</button>
 
       </div>
     </div>

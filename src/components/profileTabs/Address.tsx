@@ -28,7 +28,7 @@ const Address = () => {
                     <input  type='text' className="w-[259px] h-11 border-[1px] rounded-md px-[15px] py-[10px] outline-none"></input>
                 </div>
             </div>
-            <button className='w-36 h-11 rounded-[4px] bg-black text-white py-3 text-sm mt-16 outline-none'>Save Changes</button>
+            <button className='w-36 h-11 rounded-[4px] bg-black text-white py-3 text-sm mt-16 outline-none transform transition-transform duration-300 hover:scale-105'>Save Changes</button>
         </div>
     )
 }

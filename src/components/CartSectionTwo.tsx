@@ -69,9 +69,9 @@ const CartSectionTwo = () => {
                             <span className="font-medium text-sm text-[#0E1422]">$ 100.00</span>
                         </div>
                         <a href='checkout'>
-                            <button className="w-[296px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8">Checkout</button>
+                            <button className="w-[296px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8 transform transition-transform duration-300 hover:scale-105">Checkout</button>
                         </a>
-                        <div className="text-center mt-8 font-medium text-[12px] underline underline-offset-4 text-[#0E1422]">
+                        <div className="text-center mt-8 font-medium text-[12px] underline underline-offset-4 text-[#0E1422] hover:text-gray-500">
                             <a href="listing">Continue Shopping</a>
                         </div>
 
@@ -79,7 +79,7 @@ const CartSectionTwo = () => {
 
                     </div>
                 </div>
-                : <div className="m-20">
+                : <div className="m-28">
                      <div className="w-[273px] h-[181px] ml-[280px] mt-[135px]">
                         <img src='/images/empty-state.svg' className="w-16 h-16 mx-auto" />
                         <h4 className="font-normal text-sm text-[#5C5F6A] text-center">Your order history is waiting to be filled.</h4>

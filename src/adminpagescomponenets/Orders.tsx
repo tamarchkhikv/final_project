@@ -111,7 +111,7 @@ const Orders = () => {
           <h2 className='font-medium text-[18px]'>Orders</h2>
 
 
-          <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2'>
+          <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2 transform transition-transform duration-300 hover:scale-105'>
             <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
             <input placeholder='Search orders' className='w-[130px] outline-none'></input>
           </div>
