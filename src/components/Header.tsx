@@ -60,14 +60,14 @@ const Header = () => {
                     <input type='text' placeholder="Search products" onChange={onChangeSearch} className="outline-none"></input>
                 </form>
                 <div className="flex gap-8">
-                    <Link to='/cart'> {products.length > 0 && (
+                    <Link to='/profile'> {products.length > 0 && (
                         <span className="absolute top-2 text-xs w-3 h-3 right-12 rounded-full text-black border-[1px] border-black flex justify-center items-center">
                             {products.length}</span>
                     )}
-                        <img src='/images/icon.svg' className="w-[24px] h-[24px] transform transition-transform duration-300 hover:scale-125" />
-                    </Link>
-                    <Link to='/profile'>
                         <img src='/images/user-1.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
+                    </Link>
+                    <Link to='/cart'>
+                        <img src='/images/icon.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
                     </Link>
 
                     {isAuth ? (

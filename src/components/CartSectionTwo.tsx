@@ -1,23 +1,77 @@
 import React from "react";
 import Counter from "./Counter";
-import { useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+
 
 const CartSectionTwo = () => {
-    const cart = useSelector((state: any) => state.cart)
+    const [products, setProducts] = useState<any[]>([])
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+
+    const getAllProductsAndUserCart = async () => {
+        setIsLoading(true)
+        try {
+           
+            const products_res = await fetch('https://fakestoreapi.com/products')
+            const products_data = await products_res.json()
+            
+
+        
+            const cart_res = await fetch('https://fakestoreapi.com/carts/3')
+            const cart_products = await cart_res.json()
+
+
+            let cart_products_data: any[] = []
+
+            for (let index = 0; index < cart_products.products.length; index++) {
+                const element = cart_products.products[index];
+
+                products_data.find((product: any) => {
+                    if (product.id === element.productId) {
+                        cart_products_data.push(product)
+                    }
+                })
+            }
+
+            let total = 0
+            for (let i = 0; i < cart_products_data.length; i++) {
+               
+                total += cart_products_data[i].price;
+              }
+            
+            
+
+              console.log(total)
+            setProducts(cart_products_data)
+
+        } catch (error) {
+            console.log(error)
+        }finally {
+            setIsLoading(false)
+        }
+    }
+
+
+
+    useEffect(() => {
+        getAllProductsAndUserCart()
+    }, [])
+
+    
     
     return (
         <div>
-            {cart.products.length > 0 ?
+        
                 <div className="max-w-[1116px] mx-auto flex justify-between mb-[220px]">
                     <div>
                         <h3 className="mt-[72px] font-semibold text-base text-[#0E1422]">Your cart</h3>
-                        <div className="py-12 flex items-center">
-                            <div>
-                                {cart.products.map((product:any) => (
-                                <div className="flex items-center">
-                                    <img src='/images/image-7.png'className="w-[80px] h-[80px]"/>
-                                    <div className="ml-8 mt-2">
-                                        <h2 className="font-medium text-sm text-[#0E1422]">UTRAANET Black</h2>
+                        <div className="py-12 space-y-4 ">
+                        {isLoading && <p className='text-md text-black'>Loading...</p>}
+                            
+                                {products.map((product,index) => (
+                                <div className="flex items-center" key={index}>
+                                    <img src={product.image}className="w-[80px] h-[80px]"/>
+                                    <div className="ml-8 mt-2 w-[300px]">
+                                        <h2 className="font-medium text-sm text-[#0E1422]">{product.title}</h2>
                                         <div className="flex items-center gap-[6px] mt-[6px]">
 
                                             <span className="font-medium text-[12px] text-[#5C5F6A]">Color:</span>
@@ -31,7 +85,7 @@ const CartSectionTwo = () => {
                                         </div>
 
                                     </div>
-                                    <h3 className="ml-[106px] text-sm text-[#0E1422] font-medium">{product.price}</h3>
+                                    <h3 className="text-sm text-[#0E1422] font-medium">${product.price}</h3>
                                     <Counter />
                                     <img src='/images/remove.png' className="ml-4" />
 
@@ -41,7 +95,7 @@ const CartSectionTwo = () => {
 
 
                             
-                            </div>
+                          
 
 
 
@@ -79,16 +133,7 @@ const CartSectionTwo = () => {
 
                     </div>
                 </div>
-                : <div className="m-28">
-                     <div className="w-[273px] h-[181px] ml-[280px] mt-[135px]">
-                        <img src='/images/empty-state.svg' className="w-16 h-16 mx-auto" />
-                        <h4 className="font-normal text-sm text-[#5C5F6A] text-center">Your order history is waiting to be filled.</h4>
-                        <div className="mt-6 bg-[#0E1422] w-[179px] h-[44px] flex items-center text-white px-6 text-sm gap-[6px] rounded-md mx-auto hover:bg-gray-700 transform transition-transform duration-300 hover:scale-105">
-                            <button>Start Shopping</button>
-                            <img src='/images/arrow-right.png' className="w-6 h-6" />
-                        </div>
-                    </div>
-                </div>}
+                
         </div>
 
     )
