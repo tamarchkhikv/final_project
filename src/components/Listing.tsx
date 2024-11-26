@@ -68,13 +68,13 @@ const Listing = () => {
                 <div className="flex items-center  justify-center gap-2 w-[111px] h-9 border-[1px] rounded-[100px] ">
                     <h3 className="font-medium text-[12px] text-[#0E1422]">Perfume</h3>
                     <button>
-                        <img src='/images/x.svg' />
+                        <img src='/images/x.svg' alt="photo" />
                     </button>
                 </div>
                 <div className="flex items-center  justify-center gap-2 w-[111px] h-9 border-[1px] rounded-[100px]">
                     <h3 className="font-medium text-[12px] text-[#0E1422]">Size: M</h3>
                     <button>
-                        <img src='/images/x.svg' />
+                        <img src='/images/x.svg' alt="photo" />
                     </button>
                 </div>
             </div>
@@ -84,7 +84,7 @@ const Listing = () => {
                 <div className="flex gap-[6px] items-center">
                     <h3 className="font-medium text-[12px] text-[#5C5F6A]">SORT BY</h3>
                     <button>
-                        <img src='/images/down.svg' />
+                        <img src='/images/down.svg' alt="photo" />
                     </button>
                 </div>
 
@@ -101,7 +101,7 @@ const Listing = () => {
                                 className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer w-[264px] h-[434px] border rounded-md shadow-md">
                                 <div className="w-60 h-72 rounded">
-                                    <img src={product.image} className="w-[200px] h-[200px] mx-auto mt-5" />
+                                    <img src={product.image} className="w-[200px] h-[200px] mx-auto mt-5"  alt="photo"/>
                                 </div>
                                 <div>
                                     <p className="font-medium text-sm mt-3  hover:text-gray-500 text-center">{product.title}</p>

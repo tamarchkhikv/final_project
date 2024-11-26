@@ -46,7 +46,7 @@ const WriteReviw = () => {
         <form  onSubmit={onSubmit} className=" container  w-[424px] px-10 mt-12 mx-auto border-4 pt-8 pb-16">
             <div className="flex items-center justify-between border-b-[1px] pb-[19px] w-[344px]">
                 <h1 className="font-semibold text-base text-[#0E1422]">Write Review</h1>
-                <img src="/images/x.svg" />
+                <img src="/images/x.svg" alt="photo"/>
 
             </div>
 
@@ -66,7 +66,7 @@ const WriteReviw = () => {
                 <textarea  onChange={onChangeSearch}  required className="border-[1px] rounded-md py-[10px] px-[15px] h-32"></textarea>
             </div>
 
-            <img src="/images/5star.svg" className="mt-6" />
+            <img src="/images/5star.svg" className="mt-6" alt="photo" />
 
             {!isPending && <button className="mt-12 bg-black  w-[344px] text-white  h-[44px] rounded-[4px]  transform transition-transform duration-300 hover:scale-105">Submit Your Review</button>}
             {isPending && <button disabled className="mt-12 bg-black  w-[344px] text-white  h-[44px] rounded-[4px]">Submitted</button>}

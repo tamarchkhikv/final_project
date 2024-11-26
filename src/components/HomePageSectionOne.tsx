@@ -20,15 +20,15 @@ const HomePageSectionOne = () => {
 
                         <button>View Collection</button>
 
-                        <img src='/images/arrow-right.png' className="w-6 h-6" />
+                        <img src='/images/arrow-right.png' className="w-6 h-6" alt="photo"/>
                     </a>
                 
             </div>
 
             <div data-aos="flip-right" className="relative w-[340px] h-[440px]">
-                <img src='/images/burst-pucker.png' className="mt-[89px]" />
-                <img src='/images/ellipse.png' className="absolute bottom-3" />
-                <img src='/images/hero_image.png' className='w-[255px] h-[382px] absolute right-0 bottom-0' />
+                <img src='/images/burst-pucker.png' className="mt-[89px]"  alt="photo"/>
+                <img src='/images/ellipse.png' className="absolute bottom-3" alt="photo"/>
+                <img src='/images/hero_image.png' className='w-[255px] h-[382px] absolute right-0 bottom-0' alt="photo" />
 
 
             </div>

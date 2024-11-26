@@ -4,7 +4,7 @@ const PaymentSectionTwo = () => {
     return (
         <div className="flex justify-center items-center h-[703px] ">
             <div>
-                <img src='/images/illustration.png' className="mx-auto" />
+                <img src='/images/illustration.png' className="mx-auto" alt="photo"/>
 
                 <h2 className="font-bold text-2xl text-[#0E1422] text-center mt-5">Thank you for shopping</h2>
                 <p className="w-[379px] font-normal text-sm text-[#5C5F6A] text-center mt-4">Your order has been successfully
@@ -14,7 +14,7 @@ const PaymentSectionTwo = () => {
                     <a href='profile'>
                     <button>Go to my account</button>
                     </a>
-                    <img src='/images/arrow-right.png' className="w-6 h-6" />
+                    <img src='/images/arrow-right.png' className="w-6 h-6" alt="photo"/>
                 </div>
             </div>
         </div>

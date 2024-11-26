@@ -102,7 +102,7 @@ const Customers = () => {
 
 
           <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2 transform transition-transform duration-300 hover:scale-105'>
-            <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
+            <img src='/images/search.png' className='w-6 h-6 ml-[15px]' alt="photo" />
             <input placeholder='Search customers' className='w-[140px] outline-none'></input>
           </div>
 
@@ -112,7 +112,7 @@ const Customers = () => {
 
           <tr className='border-t-[1px] border-b-[1px]  text-[#5C5F6A] text-sm font-medium h-11 text-left' >
             <th>
-              <img src='/images/sort.svg' className='ml-[61px]' />
+              <img src='/images/sort.svg' className='ml-[61px]' alt="photo"/>
             </th>
             <th>Name</th>
             <th>Email</th>
@@ -127,12 +127,12 @@ const Customers = () => {
             <tr key={index} className='border-b-[1px] h-20 hover:bg-[#E9E9EB] text-sm font-medium text-[#717171] ' >
 
               <td >
-                <img src={tables.img} className='w-12 h-12 ml-12' /></td>
+                <img src={tables.img} className='w-12 h-12 ml-12' alt="photo"/></td>
               <td >{tables.name}</td>
               <td >{tables.email}</td>
               <td>{tables.address}</td>
               <td >
-                <img src={tables.action} />
+                <img src={tables.action} alt="photo"/>
               </td>
 
             </tr>

@@ -7,7 +7,7 @@ const DropDown = () => {
         <div>
         <Menu>
             <MenuButton className='flex gap-2'>
-                <img src='/images/menu.svg' />
+                <img src='/images/menu.svg' alt="photo" />
             </MenuButton>
             <MenuItems anchor="bottom">
                 <div className='w-[500px] border-[1px] px-2 py-1 bg-gray-100'>

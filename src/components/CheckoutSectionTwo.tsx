@@ -54,9 +54,9 @@ const CheckoutSectionTwo = () => {
 
                 <div className="flex justify-between mt-16">
                     <div className="flex gap-3">
-                        <img src='/images/checkout-image1.png' />
-                        <img src='/images/checkout-image2.png' />
-                        <img src='/images/checkout-image3.png' />
+                        <img src='/images/checkout-image1.png' alt="photo" />
+                        <img src='/images/checkout-image2.png' alt="photo"/>
+                        <img src='/images/checkout-image3.png' alt="photo"/>
                     </div>
 
                     <button className="px-6 py-3 rounded-[4px] border-[1px] border-[#B6B7BC] transform transition-transform duration-300 hover:scale-105">Edit Cart</button>

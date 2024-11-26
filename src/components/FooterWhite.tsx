@@ -5,19 +5,19 @@ const FooterWhite = () => {
             <div className="max-w-[1116px] mx-auto flex">
                 <div className="w-[272px] h-[160px] mt-[88px] ">
                     <div className="flex items-center gap-5">
-                        <img src='/images/logo-mark.png' />
+                        <img src='/images/logo-mark.png' alt="photo" />
                         <h2 className="font-extrabold text-xl text-[#0E1422]">Ecommerce</h2>
                     </div>
                     <p className="mt-3 text-[#717171] font-normal text-sm">DevCut is a YouTube channel for practical project-based learning.</p>
                     <div className="flex gap-[26px] mt-8">
                         <a href="#">
-                            <img src="/images/github.png" className="transform transition-transform duration-300 hover:scale-125" />
+                            <img src="/images/github.png" className="transform transition-transform duration-300 hover:scale-125" alt="photo"/>
                         </a>
                         <a href="#">
-                            <img src="/images/instagram.png" className="transform transition-transform duration-300 hover:scale-125" />
+                            <img src="/images/instagram.png" className="transform transition-transform duration-300 hover:scale-125" alt="photo" />
                         </a>
                         <a href="#">
-                            <img src="/images/youtube.png" className="transform transition-transform duration-300 hover:scale-125" />
+                            <img src="/images/youtube.png" className="transform transition-transform duration-300 hover:scale-125"  alt="photo"/>
                         </a>
                     </div>
 
@@ -53,9 +53,9 @@ const FooterWhite = () => {
                 <div className="mt-[79px] ml-[159px]">
                     <h3 className="text-[#878A92] font-medium text-sm">ACCEPTED PAYMENTS</h3>
                     <div className="mt-10 lg:flex lg:gap-4">
-                        <img src="/images/mastercard.png" className="transform transition-transform duration-300 hover:scale-125" />
-                        <img src="/images/amex.png" className="transform transition-transform duration-300 hover:scale-125"/>
-                        <img src="/images/visa.png" className="transform transition-transform duration-300 hover:scale-125" />
+                        <img src="/images/mastercard.png" className="transform transition-transform duration-300 hover:scale-125" alt="photo" />
+                        <img src="/images/amex.png" className="transform transition-transform duration-300 hover:scale-125" alt="photo"/>
+                        <img src="/images/visa.png" className="transform transition-transform duration-300 hover:scale-125" alt="photo" />
                     </div>
                 </div>
 

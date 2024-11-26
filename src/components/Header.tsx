@@ -56,7 +56,7 @@ const Header = () => {
             <div className="flex items-center gap-8 relative">
                 <form onSubmit={onSubmit}
                     className="flex border-[1px] border-[#E6E7E8] gap-2 px-[15px] py-[10px] rounded-md transform transition-transform duration-300 hover:scale-105">
-                    <img src='/images/search.png' className="w-6 h-6" />
+                    <img src='/images/search.png' className="w-6 h-6" alt="photo"/>
                     <input type='text' placeholder="Search products" onChange={onChangeSearch} className="outline-none"></input>
                 </form>
                 <div className="flex gap-8">
@@ -64,18 +64,18 @@ const Header = () => {
                         <span className="absolute top-2 text-xs w-3 h-3 right-12 rounded-full text-black border-[1px] border-black flex justify-center items-center">
                             {products.length}</span>
                     )}
-                        <img src='/images/user-1.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
+                        <img src='/images/user-1.svg' alt="photo" className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
                     </Link>
                     <Link to='/cart'>
-                        <img src='/images/icon.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
+                        <img src='/images/icon.svg' alt="photo" className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
                     </Link>
 
                     {isAuth ? (
                         <button onClick={logOut}>
-                            <img src='/images/logout.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
+                            <img src='/images/logout.svg' alt="photo" className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
                         </button>
                     ) : <button onClick={() => { navigate(`/login`) }}>
-                        <img src='/images/login.svg' className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
+                        <img src='/images/login.svg' alt="photo" className="w-[26px] h-[26px] transform transition-transform duration-300 hover:scale-125" />
                     </button>}
 
                 </div>

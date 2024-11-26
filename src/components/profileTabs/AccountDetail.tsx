@@ -4,7 +4,7 @@ const AccountDetail = () => {
     return (
         <div className="px-12 h-[504px] border-l-[1px] mt-16 mb-[131px] w-[534px]">
             <h1 className="font-semibold text-base text-[#0E1422]">Account Details</h1>
-            <img src='/images/avatar1.svg' className="mt-10" />
+            <img src='/images/avatar1.svg' className="mt-10" alt="photo" />
             <div className="flex flex-col mt-8">
                 <label>Full name</label>
                 <input type='text' className="border-[1px] w-[320px] h-11 rounded-md px-[15px] py-[10px] outline-none"></input>

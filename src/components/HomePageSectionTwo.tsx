@@ -60,7 +60,7 @@ const HomePageSectionTwo = () => {
                     <div key={index} className=" h-[218px] px-4 shadow-md transform transition-transform duration-300
                  hover:scale-105 cursor-pointer">
 
-                        <img src={item.icon} className="mt-4" />
+                        <img src={item.icon} className="mt-4" alt="photo" />
                         <h1 className="font-semibold text-base mt-6">{item.title}</h1>
                         <p className="text-sm font-normal text-[#5C5F6A] mt-3 w-[272px]">{item.description}</p>
 
@@ -86,7 +86,7 @@ const HomePageSectionTwo = () => {
                     hover:scale-105 cursor-pointer w-[264px] h-[434px]">
                                 <a
                                     key={index} href={`/${product.id}`}>
-                                    <img className="w-[200px] h-[230px] mx-auto" src={product.image} />
+                                    <img className="w-[200px] h-[230px] mx-auto" src={product.image} alt="photo" />
                                     <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center">{product.title}</h4>
                                     <div className="flex justify-center gap-4 mt-[14px]  ">
                                         <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">

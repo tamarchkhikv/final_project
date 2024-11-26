@@ -4,7 +4,7 @@ const AdminLogin = () => {
     return (
         <div className="flex justify-center">
             <div className="mt-20 border-[1px] p-8">
-                <img src="/images/adminlogo.svg" className="mx-auto"/>
+                <img src="/images/adminlogo.svg" className="mx-auto" alt="photo"/>
                 <div className="flex flex-col mt-[72px]">
                     <label className="font-medium text-sm text-[#474B57]">Email</label>
                     <input type="email" className="w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none"></input>

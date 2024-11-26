@@ -104,7 +104,7 @@ const Orders = () => {
 
         </Box>
 
-        <img src='/images/logout.svg' className='mr-3' />
+        <img src='/images/logout.svg' className='mr-3' alt="photo" />
       </div>
       <div className=' max-w-[1069px] mx-auto h-[922px] bg-white mt-16 pt-6 rounded'>
         <div className='flex justify-between items-center px-12 '>
@@ -112,7 +112,7 @@ const Orders = () => {
 
 
           <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2 transform transition-transform duration-300 hover:scale-105'>
-            <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
+            <img src='/images/search.png' className='w-6 h-6 ml-[15px]' alt="photo"/>
             <input placeholder='Search orders' className='w-[130px] outline-none'></input>
           </div>
 
@@ -122,7 +122,7 @@ const Orders = () => {
 
           <tr className='border-t-[1px] border-b-[1px]  text-[#5C5F6A] text-sm font-medium h-11 text-left' >
             <th>
-              <img src='/images/sort.svg' className='ml-[61px]' />
+              <img src='/images/sort.svg' className='ml-[61px]' alt="photo" />
             </th>
             <th>Order</th>
             <th>Date</th>
@@ -138,7 +138,7 @@ const Orders = () => {
             <tr key={index} className='border-b-[1px] h-20 hover:bg-[#E9E9EB] text-sm font-medium text-[#717171]' >
 
               <td >
-                <img src={tables.img} className='w-12 h-12 ml-12' /></td>
+                <img src={tables.img} className='w-12 h-12 ml-12' alt="photo" /></td>
               <td >{tables.order}</td>
               <td >{tables.date}</td>
               <td>{tables.price}</td>

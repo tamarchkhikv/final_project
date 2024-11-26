@@ -94,7 +94,7 @@ const Dashboard = () => {
                         <span className='font-medium text-[12px] text-black'>$740 Sales</span>
                     </div>
 
-                    <img src='/images/doughnut-chart.png' className='mt-8 ml-8' />
+                    <img src='/images/doughnut-chart.png' className='mt-8 ml-8' alt="photo"/>
 
                 </div>
                 <div className='w-[695px] h-[475px] rounded-lg border-[1px] bg-white '>

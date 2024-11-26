@@ -4,8 +4,8 @@ const AboutAdmin = () => {
   return (
     <div className='max-w-[749px] mx-auto h-[1005px] relative '>
       <div className='h-[200px] bg-[#0E1422]'>
-        <img src='/images/star.png' className='absolute top-[72px] left-[72px]' />
-        <img src='/images/avatar.png' className='absolute top-[107px] right-[88px]' />
+        <img src='/images/star.png' className='absolute top-[72px] left-[72px]' alt="photo"/>
+        <img src='/images/avatar.png' className='absolute top-[107px] right-[88px]' alt="photo" />
 
       </div>
       <div className='mt-20 ml-[72px]'>
@@ -31,20 +31,20 @@ const AboutAdmin = () => {
 
       </div>
 
-      <img src='/images/coffee-button.png' className='mt-8 ml-[72px]' />
+      <img src='/images/coffee-button.png' className='mt-8 ml-[72px]' alt="photo" />
 
       <div className=' flex items-center justify-center w-[749px] h-[104px] border-t-[1px] border-[#E2E8F0] absolute bottom-0'>
         <div className='flex gap-[41px] '>
           <div className='flex gap-3'>
-            <img src='/images/globe.svg' />
+            <img src='/images/globe.svg' alt="photo"/>
             <a>anorouzi.com</a>
           </div>
           <div className='flex  gap-3'>
-            <img src='/images/linkedin.svg' />
+            <img src='/images/linkedin.svg' alt="photo"/>
             <a>anorouzii</a>
           </div>
           <div className='flex  gap-3 '>
-            <img src='/images/figma.svg' />
+            <img src='/images/figma.svg' alt="photo"/>
             <a>anorouzi</a>
           </div>
 

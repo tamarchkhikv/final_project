@@ -68,7 +68,7 @@ const ProductPageSectionTwo = () => {
                                     </a>
                                     <div className="flex items-center justify-end">
                                         <a className="font-medium text-[12px] text-[#5C5F6A] gap-[6px]">SORT BY</a>
-                                        <img src="/images/down.svg" />
+                                        <img src="/images/down.svg" alt="photo"/>
 
                                     </div>
                                 </div>
@@ -76,7 +76,7 @@ const ProductPageSectionTwo = () => {
                                 <div className="mt-6">
                                     <div className="flex justify-between h-[161px] ">
                                         <div className="flex gap-6">
-                                            <img src="/images/avatar.svg" className="w-12 h-12 mt-[39px]"></img>
+                                            <img src="/images/avatar.svg" className="w-12 h-12 mt-[39px]" alt="photo"></img>
                                             <div className="mt-[38px]">
                                                 <h2 className="font-medium text-sm text-[#0E1422]">Emily Davis</h2>
                                                 <h3 className="font-medium text-[12px] text-[#5C5F6A] mt-[6px]">1 Week ago</h3>
@@ -87,25 +87,25 @@ const ProductPageSectionTwo = () => {
                                     </div>
                                     <div className="flex justify-between h-[161px]">
                                         <div className="flex gap-6">
-                                            <img src="/images/avatar.svg" className="w-12 h-12 mt-[39px]"></img>
+                                            <img src="/images/avatar.svg" className="w-12 h-12 mt-[39px]" alt="photo"></img>
                                             <div className="mt-[38px]">
                                                 <h2 className="font-medium text-sm text-[#0E1422]">Daniel Smith</h2>
                                                 <h3 className="font-medium text-[12px] text-[#5C5F6A] mt-[6px]">2 Month ago</h3>
                                                 <p className="mt-4 font-normal text-sm text-[#5C5F6A]">I can't believe how affordable and high-quality this item is!</p>
                                             </div>
                                         </div>
-                                        <img src="/images/5star.svg" className="w-24 h-4 mt-[38px]" />
+                                        <img src="/images/5star.svg" className="w-24 h-4 mt-[38px]" alt="photo" />
                                     </div>
                                     <div className="flex justify-between h-[161px]">
                                         <div className="flex gap-6">
-                                            <img src="/images/avatar.svg" className="w-12 h-12 mt-[39px]"></img>
+                                            <img src="/images/avatar.svg" className="w-12 h-12 mt-[39px]" alt="photo"></img>
                                             <div className="mt-[38px]">
                                                 <h2 className="font-medium text-sm text-[#0E1422]">Benjamin Clark</h2>
                                                 <h3 className="font-medium text-[12px] text-[#5C5F6A] mt-[6px]">23 April</h3>
                                                 <p className="mt-4 font-normal text-sm text-[#5C5F6A]">These guys know their stuff, and it shows in their products.</p>
                                             </div>
                                         </div>
-                                        <img src="/images/5star.svg" className="w-24 h-4 mt-[38px]" />
+                                        <img src="/images/5star.svg" className="w-24 h-4 mt-[38px]" alt="photo" />
                                     </div>
 
                                 </div>

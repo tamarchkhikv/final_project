@@ -12,13 +12,13 @@ const HomePageSectionThree = () => {
                      hover:bg-gray-700 transform transition-transform duration-300 hover:scale-105 rounded-md"
                      href='/listing'>
                         <button>Start Browsing</button>
-                        <img src='/images/arrow-right.png' className="w-6 h-6" />
+                        <img src='/images/arrow-right.png' className="w-6 h-6" alt="photo"/>
                     </a>
 
 
                 </div>
 
-                <img src="/images/category-image.png" className="w-[225px] h-[311px]" data-aos="flip-right"/>
+                <img src="/images/category-image.png" className="w-[225px] h-[311px]" data-aos="flip-right" alt="photo"/>
 
 
             </div>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -6,6 +8,7 @@ import React, { useEffect, useState } from "react";
 const ProductPageSectionThree = () => {
     const [apiData, setApiData] = useState([])
     const [loading, setLoading] = useState<boolean>(true);
+    const { id } = useParams()
 
 
     const getData = async () => {
@@ -31,7 +34,11 @@ const ProductPageSectionThree = () => {
 
     useEffect(() => {
         getData()
-    }, [])
+
+        window.scrollTo({
+            top: 0
+        })
+    }, [id])
 
 
 
@@ -45,11 +52,12 @@ const ProductPageSectionThree = () => {
                         <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
                     ) : (
                         <div className="grid grid-rows-1 grid-flow-col mx-auto max-w-[1092px] gap-10 mt-14 ">
-                            {apiData.slice(2, 6).map((product: any, index: any) => (
-                                <div key={index} className="transform transition-transform duration-300
-                          hover:scale-105 cursor-pointer w-[264px] h-[434px]">
 
-                                    <img src={product.image} className="w-[200px] h-[230px] mx-auto" />
+                            {apiData.slice(2, 6).map((product: any, index: any) => (
+                                <Link to={`/${product.id}`} key={index} className="transform transition-transform duration-300
+                                      hover:scale-105 cursor-pointer w-[264px] h-[434px]">
+
+                                    <img src={product.image} className="w-[200px] h-[230px] mx-auto" alt="photo" />
 
                                     <div>
                                         <p className="font-medium text-sm mt-3  hover:text-gray-500">{product.title}</p>
@@ -62,11 +70,11 @@ const ProductPageSectionThree = () => {
                                                         : "in stock"}
                                             </button>
                                             <div className="mt-3 ml-2 font-normal text-sm text-center">
-                                               $ {product.price}
+                                                $ {product.price}
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     )}

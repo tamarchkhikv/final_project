@@ -118,12 +118,12 @@ const ProductPageSectionOne = () => {
                         <div className="w-[438px] h-[562px]">
                             <div className="flex justify-between mt-1">
                                 <h1 className="font-bold text-2xl text-[#0E1422]">{dataDetails.title}</h1>
-                                <img src="/images/share.svg" />
+                                <img src="/images/share.svg" alt="photo"/>
                             </div>
 
                             <div className="flex gap-2 mt-3">
                                 <div className="w-[167px] h-7 border-[1px] rounded-[100px] flex justify-center items-center bg-[#F6F6F6]">
-                                    <img src="/images/star.svg" />
+                                    <img src="/images/star.svg" alt="photo"/>
                                     <span className="font-medium text-[12px] text-[#5C5F6A]">4.2 — 54 Reviews </span>
 
                                 </div>
@@ -158,11 +158,11 @@ const ProductPageSectionOne = () => {
 
                                 <div className="w-[164px] h-[44px] border-[1px] border-[#E6E7E8] flex items-center justify-between rounded-[4px]  px-4 gap-3 mt-[10px]">
                                     <button onClick={minus} className=" ">
-                                        <img src="/images/minus.svg" />
+                                        <img src="/images/minus.svg" alt="photo" />
                                     </button>
                                     <p className="text-base">{count}</p>
                                     <button onClick={plus} className="">
-                                        <img src="/images/add.svg" />
+                                        <img src="/images/add.svg"  alt="photo"/>
                                     </button>
 
 
@@ -171,7 +171,7 @@ const ProductPageSectionOne = () => {
                                 onClick={(e) => handleAddToCart(e, dataDetails)}
                                 >
                                     <button className=" bg-black w-[285px] h-[44px] text-white rounded-[4px]">Add to cart</button>
-                                    <img src="/images/whishlist.svg" className="w-[43px] h-[43px]" />
+                                    <img src="/images/whishlist.svg" className="w-[43px] h-[43px]" alt="photo" />
 
                                 </div>
 

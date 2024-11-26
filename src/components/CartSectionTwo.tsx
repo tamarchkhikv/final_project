@@ -69,15 +69,15 @@ const CartSectionTwo = () => {
                             
                                 {products.map((product,index) => (
                                 <div className="flex items-center" key={index}>
-                                    <img src={product.image}className="w-[80px] h-[80px]"/>
+                                    <img src={product.image}className="w-[80px] h-[80px]" alt="photo"/>
                                     <div className="ml-8 mt-2 w-[300px]">
                                         <h2 className="font-medium text-sm text-[#0E1422]">{product.title}</h2>
                                         <div className="flex items-center gap-[6px] mt-[6px]">
 
                                             <span className="font-medium text-[12px] text-[#5C5F6A]">Color:</span>
-                                            <img src="/images/circlegreen.png" className="w-3 h-3" />
+                                            <img src="/images/circlegreen.png" className="w-3 h-3" alt="photo"/>
                                             <div className="w-3 h-6 flex items-center">
-                                                <img src='/images/line.png' />
+                                                <img src='/images/line.png' alt="photo"/>
 
                                             </div>
 
@@ -87,7 +87,7 @@ const CartSectionTwo = () => {
                                     </div>
                                     <h3 className="text-sm text-[#0E1422] font-medium">${product.price}</h3>
                                     <Counter />
-                                    <img src='/images/remove.png' className="ml-4" />
+                                    <img src='/images/remove.png' className="ml-4" alt="photo"/>
 
 
                                 </div>

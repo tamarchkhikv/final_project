@@ -104,7 +104,7 @@ const AddProductsPage = () => {
                         <div className="flex  flex-col">
                             <label className='font-medium text-sm text-[#474B57]'>Images</label>
                             <div className='mt-2 flex gap-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px]'>
-                                <img src='/images/upload.svg' />
+                                <img src='/images/upload.svg' alt="photo" />
                                 <input type="text" onChange={onProductImage} className=" font-medium text-[#878A92] text-sm"></input>
                             </div>
 

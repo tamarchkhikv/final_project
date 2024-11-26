@@ -106,7 +106,7 @@ const AdminProducts = () => {
 
         </Box>
 
-        <img src='/images/logout.svg' className='mr-3' />
+        <img src='/images/logout.svg' className='mr-3'alt="photo" />
       </div>
       <div className=' max-w-[1069px] mx-auto h-[922px] bg-white mt-16 pt-6 rounded'>
         <div className='flex justify-between items-center px-12 '>
@@ -116,7 +116,7 @@ const AdminProducts = () => {
               <button className='bg-[#0E1422] px-5 text-white  h-10 rounded transform transition-transform duration-300 hover:scale-105'>Add product</button>
             </a>
             <div className='flex items-center w-[242px] h-10 rounded-md border-[1px] gap-2 transform transition-transform duration-300 hover:scale-105'>
-              <img src='/images/search.png' className='w-6 h-6 ml-[15px]' />
+              <img src='/images/search.png' className='w-6 h-6 ml-[15px]' alt="photo" />
               <input placeholder='Search products' className='w-[130px] outline-none'></input>
             </div>
           </div>
@@ -126,7 +126,7 @@ const AdminProducts = () => {
 
           <tr className='border-t-[1px] border-b-[1px]  text-[#5C5F6A] text-sm font-medium h-11 text-left' >
             <th>
-              <img src='/images/sort.svg' className='ml-[61px]' />
+              <img src='/images/sort.svg' className='ml-[61px]' alt="photo" />
             </th>
             <th>Name</th>
             <th>SKU</th>
@@ -143,14 +143,14 @@ const AdminProducts = () => {
             <tr key={index} className='border-b-[1px] h-20 hover:bg-[#E9E9EB] text-sm font-medium text-[#717171] ' >
 
               <td >
-                <img src={tables.img} className='w-12 h-12 ml-12' /></td>
+                <img src={tables.img} className='w-12 h-12 ml-12' alt="photo"/></td>
               <td >{tables.name}</td>
               <td >{tables.sku}</td>
               <td>{tables.price}</td>
               <td >{tables.stock}</td>
               <td >{tables.categories}</td>
               <td >
-                <img src={tables.action} />
+                <img src={tables.action} alt="photo"/>
               </td>
 
             </tr>
