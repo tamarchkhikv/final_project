@@ -77,8 +77,8 @@ const LoginSectionTwo = () => {
                     <Link to="/forgotpassword"
                         className="flex justify-end mt-4 font-medium text-[#555555] text-[12px] hover:text-red-800">Forgot Password?</Link>
 
-                    <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm  hover:bg-gray-700 transform transition-transform duration-300 
-                    hover:scale-105">
+                    <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm 
+                     hover:bg-gray-700 transform transition-transform duration-300 hover:scale-105">
                         {isLoading ? 'loading...' : 'Login'}</button>
 
 

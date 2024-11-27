@@ -86,26 +86,26 @@ const AddProductsPage = () => {
                     <div className="ml-12 flex flex-col gap-4 mt-10">
                         <div className="flex flex-col">
                             <label className='font-medium text-sm text-[#474B57]'>Title</label>
-                            <input onChange={onProductTitle} type='text' className='mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
+                            <input onChange={onProductTitle} required type='text' className='mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
                         </div>
                         <div className="flex  flex-col">
                             <label className='font-medium text-sm text-[#474B57]'>Price</label>
-                            <input onChange={onProductPrice} type='text' className=' mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
+                            <input onChange={onProductPrice} required type='text' className=' mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
                         </div>
                         <div className="flex  flex-col">
                             <label className='font-medium text-sm text-[#474B57]'>Category</label>
-                            <input onChange={onProductCategory} type='text' className='mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
+                            <input onChange={onProductCategory} required type='text' className='mt-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></input>
                         </div>
 
                         <div className="flex  flex-col">
                             <label className='font-medium text-sm text-[#474B57]'>Description</label>
-                            <textarea onChange={onProductDescription} className=' mt-2 w-80 h-[128px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></textarea>
+                            <textarea onChange={onProductDescription} required className=' mt-2 w-80 h-[128px] border-[1px] rounded-md px-[15px] py-[10px] outline-none'></textarea>
                         </div>
                         <div className="flex  flex-col">
                             <label className='font-medium text-sm text-[#474B57]'>Images</label>
                             <div className='mt-2 flex gap-2 w-80 h-[45px] border-[1px] rounded-md px-[15px] py-[10px]'>
                                 <img src='/images/upload.svg' alt="photo" />
-                                <input type="text" onChange={onProductImage} className=" font-medium text-[#878A92] text-sm"></input>
+                                <input type="text" onChange={onProductImage} required className=" font-medium text-[#878A92] text-sm"></input>
                             </div>
 
                         </div>
