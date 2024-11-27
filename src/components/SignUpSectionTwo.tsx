@@ -1,7 +1,79 @@
+import { useState } from "react";
 import React from "react";
 import GoogleButton from "./GoogleButton";
+import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
-const SignUpSectionTwo= () => {
+
+const SignUpSectionTwo = () => {
+    const [userName, setUserName] = useState("")
+    const [userEmail, setUserEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [isLoading, setIsLoading] = useState(false)
+
+    const onSubmitForm = (e: any) => {
+
+        e.preventDefault();
+
+        setIsLoading(true);
+
+        fetch('https://fakestoreapi.com/users', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+
+            body: JSON.stringify({
+
+                email: 'John@gmail.com',
+                username: 'johnd',
+                password: 'm38rmF$',
+                name: {
+                    firstname: 'John',
+                    lastname: 'Doe'
+                },
+                address: {
+                    city: 'kilcoole',
+                    street: '7835 new road',
+                    number: 3,
+                    zipcode: '12926-3874',
+                    geolocation: {
+                        lat: '-37.3159',
+                        long: '81.1496'
+                    }
+                },
+                phone: '1-570-236-7033'
+            })
+
+        })
+            .then(res => res.json())
+            .then(json => {
+                Cookies.set("AccessToken", json.token)
+                setIsLoading(false)
+                alert("Sign Up successfully")
+            })
+            .catch(err => {
+
+                setIsLoading(false)
+                alert("Sorry, we can't complete your sign up")
+
+
+            }).finally(() => {
+                window.location.reload()
+            })
+    }
+
+
+    const onUserNameChange = (e: any) => {
+        setUserName(e.target.value)
+    }
+    const onUserEmailChange = (e: any) => {
+        setUserEmail(e.target.value)
+    }
+    const onUserPasswordChange = (e: any) => {
+        setPassword(e.target.value)
+    }
     return (
         <div className="flex justify-center mt-32 mb-[148px]">
             <div className="w-[320px]">
@@ -14,30 +86,33 @@ const SignUpSectionTwo= () => {
 
 
                 </div>
+                <form onSubmit={onSubmitForm}>
+                    <div className="flex flex-col mt-[34px]">
+                        <label>Name</label>
+                        <input type='text' required onChange={onUserNameChange} className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
+                    </div>
+                    <div className="flex flex-col mt-[15px]">
+                        <label>Email</label>
+                        <input type='email' required onChange={onUserEmailChange} className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
+                    </div>
 
-                <div className="flex flex-col mt-[34px]">
-                    <label>Name</label>
-                    <input type='text'className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
-                </div>
-                <div className="flex flex-col mt-[15px]">
-                    <label>Email</label>
-                    <input type='email' className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
-                </div>
-
-                <div className="flex flex-col mt-[15px]">
-                    <label>Password</label>
-                    <input type="password" className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
-                </div>
+                    <div className="flex flex-col mt-[15px]">
+                        <label>Password</label>
+                        <input type="password" required onChange={onUserPasswordChange} className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
+                    </div>
 
 
-                <a className= "flex mt-4 font-medium text-[#555555] text-[12px]">By creating an account you agree with our Terms of Service, Privacy Policy,
-                </a>
+                    <a className="flex mt-4 font-medium text-[#555555] text-[12px]">By creating an account you agree with our Terms of Service, Privacy Policy,
+                    </a>
 
-                <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm  hover:bg-gray-700 transform transition-transform duration-300 hover:scale-105">Create account</button>
+                    <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm  hover:bg-gray-700 transform transition-transform duration-300 hover:scale-105">
+                        {isLoading ? 'loading...' : 'Create Account'}</button>
 
-                <a className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6">Already have an account? Log in</a>
 
-               
+
+                    <Link to="/login" className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6  hover:text-red-800">Already have an account? Log in</Link>
+
+                </form>
 
             </div>
 

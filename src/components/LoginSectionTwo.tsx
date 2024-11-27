@@ -38,9 +38,9 @@ const LoginSectionTwo = () => {
                 setIsLoading(false)
                 alert("User not found")
 
-                
-            }).finally(()=> {
-               window.location.reload()
+
+            }).finally(() => {
+                window.location.reload()
             })
     }
 
@@ -67,22 +67,22 @@ const LoginSectionTwo = () => {
                 <form onSubmit={onSubmitForm}>
                     <div className="flex flex-col mt-[34px]">
                         <label>Email</label>
-                        <input type='text' onChange={onUserNameChange} className=" w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
+                        <input type='text' required onChange={onUserNameChange} className=" w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
                     </div>
                     <div className="flex flex-col mt-[15px]">
                         <label>Password</label>
-                        <input type="password" onChange={onUserPasswordChange} className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
+                        <input type="password" required onChange={onUserPasswordChange} className="w-[320px] h-[45px] rounded-md border-[1px] px-[15px] py-[10px] border-[#E6E7E8] outline-none"></input>
                     </div>
 
                     <Link to="/forgotpassword"
-                    className="flex justify-end mt-4 font-medium text-[#555555] text-[12px] hover:text-red-800">Forgot Password?</Link>
+                        className="flex justify-end mt-4 font-medium text-[#555555] text-[12px] hover:text-red-800">Forgot Password?</Link>
 
                     <button className="w-[318px] h-[44px] py-3 bg-[#0E1422] text-white rounded-[4px] mt-6 text-sm  hover:bg-gray-700 transform transition-transform duration-300 
                     hover:scale-105">
                         {isLoading ? 'loading...' : 'Login'}</button>
 
 
-                    <Link to ="/signup" className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6  hover:text-red-800">Don't have an account? Sign up</Link>
+                    <Link to="/signup" className="font-normal text-sm text-[#5C5F6A] flex justify-center mt-6  hover:text-red-800">Don't have an account? Sign up</Link>
 
                 </form>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PaymentSectionTwo = () => {
     return (
@@ -11,9 +12,9 @@ const PaymentSectionTwo = () => {
                     placed and is now being processed.</p>
 
                 <div className="mt-[48px] mx-auto bg-[#0E1422] w-[196px] h-[44px] flex items-center text-white px-6 text-sm gap-[6px] rounded-md">
-                    <a href='profile'>
+                    <Link to='/profile'>
                     <button>Go to my account</button>
-                    </a>
+                    </Link>
                     <img src='/images/arrow-right.png' className="w-6 h-6" alt="photo"/>
                 </div>
             </div>
