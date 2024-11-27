@@ -104,8 +104,8 @@ const Listing = () => {
                                     <img src={product.image} className="w-[200px] h-[200px] mx-auto mt-5"  alt="photo"/>
                                 </div>
                                 <div>
-                                    <p className="font-medium text-sm mt-3  hover:text-gray-500 text-center">{product.title}</p>
-                                    <div className="flex justify-center items-center  mt-2 ">
+                                    <p className="font-medium text-sm  hover:text-gray-500 text-center">{product.title}</p>
+                                    <div className="flex justify-center items-center ">
                                         <button className="bg-white text-center w-20 h-7 rounded-full border text-xs font-medium mt-3 items-center">
                                             {product.rating.count === 0
                                                 ? "out of stock"
