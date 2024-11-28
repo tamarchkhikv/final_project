@@ -14,7 +14,7 @@ const ProductPageSectionThree = () => {
     const getData = async () => {
         setLoading(true);
         try {
-            const res = await fetch('https://fakestoreapi.com/products');
+            const res = await fetch("https://fakestoreapi.com/products");
 
             if (!res.ok) {
                 throw new Error('Network response was not ok');
@@ -22,6 +22,7 @@ const ProductPageSectionThree = () => {
 
             const data: any = await res.json();
 
+            
             setApiData(data);
 
         } catch (error) {
@@ -30,7 +31,7 @@ const ProductPageSectionThree = () => {
             setLoading(false);
         }
     };
-
+    
 
     useEffect(() => {
         getData()

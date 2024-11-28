@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CustomPagination from "./CustomPagination";
+import Pagination from "../components/Pagination";
 import { useParams } from "react-router-dom";
 
 
@@ -8,7 +8,9 @@ const Listing = () => {
 
     const [apiData, setApiData] = useState([])
     const [loading, setLoading] = useState<boolean>(true);
-    const {category}: any = useParams()
+    const { category }: any = useParams()
+    const [currentPage, setCurrentPage] = useState<any>(1)
+    const [postPerPage, setPerPage] = useState<any>(6)
 
     const getData = async () => {
         setLoading(true);
@@ -53,13 +55,18 @@ const Listing = () => {
 
 
     useEffect(() => {
-        if(category){
+        if (category) {
             getDatabyCategory()
-        }else{
+        } else {
             getData()
         }
- 
-    }, [category])
+
+    }, [category]);
+
+    const lastPostIndex = currentPage * postPerPage;
+    const firstPostIndex = lastPostIndex - postPerPage;
+    const currentPost = apiData.slice(firstPostIndex, lastPostIndex)
+
 
     return (
         <div className="w-[824px] ml-10">
@@ -95,13 +102,13 @@ const Listing = () => {
                     <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
                 ) : (
                     <div className="grid grid-cols-3 gap-10  mt-4 ">
-                        {apiData.map((product: any, index: number) => (
+                        {currentPost.map((product: any, index: number) => (
                             <a key={index}
                                 href={`/${product.id}`}
                                 className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer w-[264px] h-[434px] border rounded-md shadow-md">
                                 <div className="w-60 h-72 rounded">
-                                    <img src={product.image} className="w-[200px] h-[200px] mx-auto mt-5"  alt="photo"/>
+                                    <img src={product.image} className="w-[200px] h-[200px] mx-auto mt-5" alt="photo" />
                                 </div>
                                 <div>
                                     <p className="font-medium text-sm  hover:text-gray-500 text-center">{product.title}</p>
@@ -123,7 +130,11 @@ const Listing = () => {
                     </div>
                 )}
             </div>
-            <CustomPagination />
+            <Pagination
+                totalPosts={apiData.length}
+                postPerPage={postPerPage}
+                setCurrentPage={setCurrentPage}
+            />
         </div>
     )
 }

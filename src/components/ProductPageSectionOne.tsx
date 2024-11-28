@@ -50,7 +50,7 @@ const ProductPageSectionOne = () => {
 
     useEffect(() => {
         getDataDetails();
-    }, []);
+    }, [id]);
 
 
     const dispatch = useDispatch()

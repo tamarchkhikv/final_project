@@ -80,9 +80,7 @@ const HomePageSectionFour = () => {
                         )}
                     </div>
                     <div>
-                        {loading ? (
-                            <h1 className='font-bold text-[#0E1422] text-center text-2xl mt-40'>Loading...</h1>
-                        ) : (
+                        
 
                             <TabPanel className="mt-[80px] grid grid-flow-col gap-10" data-aos="flip-down" >
                             
@@ -110,7 +108,7 @@ const HomePageSectionFour = () => {
                                 ))}
 
                             </TabPanel>
-                        )}
+                    
                     </div>
                 </TabPanels>
             </TabGroup>
