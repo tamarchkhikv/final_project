@@ -45,14 +45,14 @@ const DropDown = () => {
         <img src='/images/drop-down.png' />
       </MenuButton>
       <MenuItems anchor="bottom">
-        <div className='border-[1px] px-2 py-1 bg-gray-100'>
+        <div className='border-[2px] px-2 py-1 bg-white rounded shadow-2xl'>
           {apiData.map(
             (item, index) => (
 
               <MenuItem key={index}>
 
                 <Link to ={`/listing/${item}`}
-                className="block data-[focus]:bg-gray-200 w-[140px]" >
+                className="block data-[focus]:bg-gray-100 py-2 px-2 w-40 rounded" >
                   {item}
                 </Link>
 
