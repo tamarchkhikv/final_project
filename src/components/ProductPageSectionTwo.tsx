@@ -1,5 +1,6 @@
 import React from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
+import { Link } from "react-router-dom";
 
 const ProductPageSectionTwo = () => {
 
@@ -63,9 +64,9 @@ const ProductPageSectionTwo = () => {
                                         <h2 className="font-bold text-[32px] text-[#0E1422]">4.2</h2>
                                         <h5 className="font-normal text-sm text-[#71747E]">— 54 Reviews</h5>
                                     </div>
-                                    <a href="/writereviw">
+                                    <Link to="/writereviw">
                                         <button className=" mt-10 w-36 h-11 border-[1px] rounded-[4px]">Write a review</button>
-                                    </a>
+                                    </Link>
                                     <div className="flex items-center justify-end">
                                         <a className="font-medium text-[12px] text-[#5C5F6A] gap-[6px]">SORT BY</a>
                                         <img src="/images/down.svg" alt="photo"/>
