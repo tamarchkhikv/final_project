@@ -12,7 +12,7 @@ const Pagination = ({ totalPosts, postPerPage, setCurrentPage }: any) => {
       {pages.map((page, index) => {
         return (
           <button
-            className="border-2 border-gray-400 rounded-md text-gray-700 text-center w-6 h-6 hover:bg-gray-300"
+            className="border-2 border-gray-200 rounded-lg text-gray-500 text-center w-9 h-9 hover:bg-gray-200"
             key={index}
             onClick={() => setCurrentPage(page)}
           >

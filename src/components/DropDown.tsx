@@ -45,7 +45,7 @@ const DropDown = () => {
         <img src='/images/drop-down.png' />
       </MenuButton>
       <MenuItems anchor="bottom">
-        <div className='border-[2px] px-2 py-1 bg-white rounded shadow-2xl'>
+        <div className='border-[2px] px-2 py-1 bg-white rounded-md '>
           {apiData.map(
             (item, index) => (
 
