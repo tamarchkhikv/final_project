@@ -16,11 +16,11 @@ const AdminPage = () => {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex">
           <div className="w-[260px] h-[925px] mt-4 pb-[359px]">
-            <img src='/images/adminlogo.svg' className="w-[116px] h-10 mx-auto" alt="photo" />
+            <img src='/images/adminlogo.svg' className="w-[116px] h-10 ml-11" alt="photo" />
 
 
 
-            <TabList className="flex flex-col mx-auto mt-16 gap-4 w-[212px] ml-4">
+            <TabList className="flex flex-col mx-auto mt-16 gap-4 w-[212px] ">
 
 
               <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
