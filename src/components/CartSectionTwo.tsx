@@ -126,7 +126,7 @@ const CartSectionTwo = () => {
                     </div>
                 </div>
 
-                
+
                 {
                     products.length === 0 &&
                     <div className=" pt-4 pb-[131px]">
@@ -163,8 +163,14 @@ const CartSectionTwo = () => {
                         <h4 className="font-medium text-sm text-[#0E1422]">Total</h4>
                         <span className="font-medium text-sm text-[#0E1422]">${(totalPrice + 3).toFixed(2)}</span>
                     </div>
+
                     <Link to='/checkout'>
-                        <button className="w-[296px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8 transform transition-transform duration-300 hover:scale-105">Checkout</button>
+                        {products.length === 0 &&
+                            <button disabled className="w-[296px] h-[44px] py-3 bg-gray-700 text-white rounded-md mt-8">Checkout</button>}
+                    </Link>
+                    <Link to='/checkout'>
+                        {products.length > 0 &&
+                            <button className="w-[296px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8 transform transition-transform duration-300 hover:scale-105">Checkout</button>}
                     </Link>
                     <div className="text-center mt-8 font-medium text-[12px] underline underline-offset-4 text-[#0E1422] hover:text-gray-500">
                         <a href="listing">Continue Shopping</a>
