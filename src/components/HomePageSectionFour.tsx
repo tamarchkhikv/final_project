@@ -40,10 +40,10 @@ const HomePageSectionFour = () => {
                 <TabList className="flex justify-center gap-6">
 
 
-                    <Tab className="rounded-[100px] border-[#E9E9EB] border-[1px] outline-none px-[16px] active:border-black
-                     py-[3px] font-medium text-[14px]  text-[#717171] hover:text-[#202533] ">Featured</Tab>
+                    <Tab className="rounded-[100px] border-[#E9E9EB] border-[1px] outline-none px-[16px]
+                     py-[3px] font-medium text-[14px]  text-[#717171] hover:text-[#202533]  data-[selected]:bg-gray-200">Featured</Tab>
                     <Tab className="font-medium text-[14px] text-[#717171] hover:text-[#202533] py-[3px] px-[16px] rounded-[100px] 
-                    border-[#E9E9EB] border-[1px] outline-none active:border-black">Latest</Tab>
+                    border-[#E9E9EB] border-[1px] outline-none data-[selected]:bg-gray-200">Latest</Tab>
 
 
                 </TabList>
