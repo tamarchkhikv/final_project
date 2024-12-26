@@ -59,7 +59,7 @@ const HomePageSectionFour = () => {
                           hover:scale-105 cursor-pointer w-[264px] h-[434px]">
                                         <Link to={`/${product.id}`} key={index} >
                                             <img src={product.image} className="vw-[200px] h-[230px] mx-auto " alt="photo"/>
-                                            <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center">{product.title}</h4>
+                                            <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center h-5 overflow-hidden">{product.title}</h4>
                                             <div className="flex justify-center gap-4 mt-[14px]">
                                                 <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">
                                                     {product.rating.count === 0
@@ -90,7 +90,7 @@ const HomePageSectionFour = () => {
                           hover:scale-105 cursor-pointer w-[264px] h-[434px]">
                                         <Link to={`/${product.id}`} key={index}>
                                             <img src={product.image} className="w-[200px] h-[230px] mx-auto" alt="photo"/>
-                                            <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center">{product.title}</h4>
+                                            <h4 className="mt-[25px] font-medium text-sm hover:text-gray-500 text-center  h-5 overflow-hidden">{product.title}</h4>
                                             <div className="flex justify-center gap-4 mt-[14px]">
                                                 <div className="text-[#0E1422] font-medium text-[12px] border-[#E6E7E8] border-[1px] px-4 py-[2px] rounded-[100px]">
                                                     {product.rating.count === 0
