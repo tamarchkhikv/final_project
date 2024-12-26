@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CheckoutSectionTwo = () => {
     return (
@@ -79,9 +80,9 @@ const CheckoutSectionTwo = () => {
                     <h4 className="font-medium text-sm text-[#0E1422]">Total</h4>
                     <span className="font-medium text-sm text-[#0E1422]">$ 78.00</span>
                 </div>
-                <a href='payment'>
+                <Link to='/payment'>
                     <button className="w-[372px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8 transform transition-transform duration-300 hover:scale-105">Place Order</button>
-                </a>
+                </Link>
 
 
 

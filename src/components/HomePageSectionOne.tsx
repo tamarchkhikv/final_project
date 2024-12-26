@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const HomePageSectionOne = () => {
     return (
@@ -14,14 +16,14 @@ const HomePageSectionOne = () => {
                     <h1 className="text-[32px] font-semibold text-[#202533]">Fresh Arrivals Online</h1>
                     <h6 className="text-[#474B57] font-normal mt-3 text-[14px]">Discover Our Newest Collection Today.</h6>
 
-                    <a className="mt-[48px] bg-[#0E1422] w-[183px] h-[44px] flex items-center text-white px-6 
+                    <Link className="mt-[48px] bg-[#0E1422] w-[183px] h-[44px] flex items-center text-white px-6 
                         text-sm gap-[6px] rounded-md hover:bg-gray-700 transform transition-transform duration-300 hover:scale-105"
-                        href='/listing'>
+                        to='/listing'>
 
-                        <button>View Collection</button>
+                        View Collection
 
                         <img src='/images/arrow-right.png' className="w-6 h-6" alt="photo"/>
-                    </a>
+                    </Link>
                 
             </div>
 
