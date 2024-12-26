@@ -1,6 +1,7 @@
 import React from "react";
 import Counter from "./Counter";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 const CartSectionTwo = () => {
@@ -122,15 +123,25 @@ const CartSectionTwo = () => {
                                 </div>
                             ))}
                         </div>
-
-
-
-
-
-
-
                     </div>
                 </div>
+
+                
+                {
+                    products.length === 0 &&
+                    <div className=" pt-4 pb-[131px]">
+                        <div className="w-[273px] h-[181px]  mt-[135px]">
+                            <img src='/images/empty-state.svg' className="w-16 h-16 mx-auto" />
+                            <h4 className="font-normal text-sm text-[#5C5F6A] text-center">Your cart is waiting to be filled.</h4>
+                            <Link to='/listing' className="mt-6 bg-[#0E1422] w-[179px] h-[44px] flex items-center 
+                         hover:bg-gray-700 transform transition-transform duration-300 hover:scale-105 text-white px-6 text-sm gap-[6px] rounded-md mx-auto">
+                                Start Shopping
+                                <img src='/images/arrow-right.png' className="w-6 h-6" />
+                            </Link>
+                        </div>
+                    </div>
+                }
+
 
                 <div className="w-[341px] h-[430px] border-[1px] border-[#E6E7E8] rounded-md mt-14 px-6">
                     <h1 className="font-semibold text-base text-[#0E1422] mt-8">Order Summary</h1>
@@ -152,9 +163,9 @@ const CartSectionTwo = () => {
                         <h4 className="font-medium text-sm text-[#0E1422]">Total</h4>
                         <span className="font-medium text-sm text-[#0E1422]">${(totalPrice + 3).toFixed(2)}</span>
                     </div>
-                    <a href='checkout'>
+                    <Link to='/checkout'>
                         <button className="w-[296px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8 transform transition-transform duration-300 hover:scale-105">Checkout</button>
-                    </a>
+                    </Link>
                     <div className="text-center mt-8 font-medium text-[12px] underline underline-offset-4 text-[#0E1422] hover:text-gray-500">
                         <a href="listing">Continue Shopping</a>
                     </div>
