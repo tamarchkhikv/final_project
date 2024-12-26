@@ -10,9 +10,6 @@ import ColorRadioButton from "./ColorRadioButton";
 import { useState } from "react";
 import { addToCart } from "../store/app/cartSlice";
 import { useDispatch} from "react-redux";
-
-
-
 import { useParams } from "react-router-dom";
 
 
@@ -109,7 +106,7 @@ const ProductPageSectionOne = () => {
                             {Array.from({ length: 4 }, (_, index) => (
                                 <SwiperSlide
                                     key={index} >
-                                    <img src={dataDetails.image} className='w-[237px] h-[312px] mx-auto mt-20' />
+                                    <img src={dataDetails.image} className='w-[237px] h-[312px] mx-auto mt-24' />
 
                                 </SwiperSlide>
                             ))}

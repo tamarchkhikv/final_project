@@ -49,33 +49,33 @@ const Profile = () => {
 
                         <TabList className="flex flex-col mt-[120px] gap-4 w-[212px]">
 
-                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                                 <img src="/images/cart.svg" alt="photo" />
                                 <button onClick={()=>{navigate(`/profile?search=orders`)}}>Orders</button>
                             </Tab>
 
 
-                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                                 <img src="/images/heart.svg" alt="photo"/>
                                 <button onClick={()=>{navigate(`/profile?search=wishlist`)}}>Wishlist</button>
                             </Tab>
 
-                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                                 <img src="/images/delivery.svg" alt="photo"/>
                                 <button onClick={()=>{navigate(`/profile?search=address`)}}>Address</button>
                             </Tab>
 
-                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                                 <img src="/images/key.svg" alt="photo"/>
                                 <button onClick={()=>{navigate(`/profile?search=password`)}}>Password</button>
                             </Tab>
 
-                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                                 <img src="/images/user.svg" alt="photo" />
                                 <button onClick={()=>{navigate(`/profile?search=accountdetail`)}}>Account Detail</button>
                             </Tab>
 
-                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+                            <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                                 <img src="/images/logout.svg" alt="photo" />
                                 <button onClick={()=>{navigate(`/profile?search=logout`)}}>Logout</button>
                             </Tab>

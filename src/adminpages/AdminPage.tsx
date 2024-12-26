@@ -23,33 +23,33 @@ const AdminPage = () => {
             <TabList className="flex flex-col mx-auto mt-16 gap-4 w-[212px] ">
 
 
-              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                 <img src="/images/dashboard.svg" alt="photo"/>
                 <button>Dashboard</button>
               </Tab>
 
 
-              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                 <img src="/images/product.svg" alt="photo"/>
                 <button>Products</button>
               </Tab>
 
-              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                 <img src="/images/cart.svg" alt="photo" />
                 <button>Orders</button>
               </Tab>
 
-              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                 <img src="/images/users.svg" alt="photo"/>
                 <button>Customers</button>
               </Tab>
 
-              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                 <img src="/images/emptystar.svg" alt="photo"/>
                 <button>Reviews</button>
               </Tab>
 
-              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg">
+              <Tab className="outline-none flex px-6 py-2 gap-[10px] hover:bg-[#F6F6F6] rounded-lg data-[selected]:bg-gray-200">
                 <img src="/images/settings.svg" alt="photo"/>
                 <button>Settings</button>
               </Tab>

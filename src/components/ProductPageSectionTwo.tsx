@@ -11,19 +11,21 @@ const ProductPageSectionTwo = () => {
 
                     <TabList>
                         <div className="flex flex-col w-[241px] h-[98px] mt-[248px]">
-                            <Tab className='outline-none'>
-                                <div className="flex items-center px-6 gap-[10px] h-[41px] hover:bg-[#F6F6F6]">
-                                    <img src='/images/more.svg' />
-                                    <h3>Details</h3>
-                                </div>
+                            <Tab className='flex items-center px-6 gap-[10px] h-[41px] hover:bg-[#F6F6F6] outline-none
+                                           data-[selected]:bg-gray-200 rounded-md '>
+
+                                <img src='/images/more.svg' />
+                                <h3>Details</h3>
+
                             </Tab>
 
 
-                            <Tab className='outline-none'>
-                                <div className="flex items-center px-6 gap-[10px] h-[41px] hover:bg-[#F6F6F6] ">
-                                    <img src='/images/empty-star.svg' />
-                                    <h3>Reviews</h3>
-                                </div>
+                            <Tab className='flex items-center px-6 gap-[10px] h-[41px] hover:bg-[#F6F6F6] outline-none
+                                            data-[selected]:bg-gray-200 rounded-md' >
+
+                                <img src='/images/empty-star.svg' />
+                                <h3>Reviews</h3>
+
                             </Tab>
 
 
@@ -69,7 +71,7 @@ const ProductPageSectionTwo = () => {
                                     </Link>
                                     <div className="flex items-center justify-end">
                                         <a className="font-medium text-[12px] text-[#5C5F6A] gap-[6px]">SORT BY</a>
-                                        <img src="/images/down.svg" alt="photo"/>
+                                        <img src="/images/down.svg" alt="photo" />
 
                                     </div>
                                 </div>
