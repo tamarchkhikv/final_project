@@ -166,7 +166,7 @@ const CartSectionTwo = () => {
 
                     <Link to='/checkout'>
                         {products.length === 0 &&
-                            <button disabled className="w-[296px] h-[44px] py-3 bg-gray-700 text-white rounded-md mt-8">Checkout</button>}
+                            <button disabled className="w-[296px] h-[44px] py-3 bg-gray-500 text-white rounded-md mt-8">Checkout</button>}
                     </Link>
                     <Link to='/checkout'>
                         {products.length > 0 &&
