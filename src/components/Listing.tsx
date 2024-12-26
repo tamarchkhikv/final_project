@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Pagination from "../components/Pagination";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -103,8 +104,8 @@ const Listing = () => {
                 ) : (
                     <div className="grid grid-cols-3 gap-10  mt-4 ">
                         {currentPost.map((product: any, index: number) => (
-                            <a key={index}
-                                href={`/${product.id}`}
+                            <Link key={index}
+                                to={`/${product.id}`}
                                 className="transform transition-transform duration-300
                     hover:scale-105 cursor-pointer w-[264px] h-[434px] border rounded-md shadow-md">
                                 <div className="w-60 h-72 rounded">
@@ -125,7 +126,7 @@ const Listing = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 )}

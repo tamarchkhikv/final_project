@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 
 
 const CartSectionTwo = () => {
-    const [products, setProducts] = useState<any[]>([])
-    const [isLoading, setIsLoading] = useState<boolean>(false)
+    const [products, setProducts] = useState<any[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     const getAllProductsAndUserCart = async () => {
+
         setIsLoading(true)
         try {
 
@@ -25,37 +27,54 @@ const CartSectionTwo = () => {
             for (let index = 0; index < cart_products.products.length; index++) {
                 const element = cart_products.products[index];
 
-                products_data.find((product: any) => {
-                    if (product.id === element.productId) {
-                        cart_products_data.push(product)
-                    }
-                })
+                const foundProduct = products_data.find((product: any) => product.id === element.productId);
+                if (foundProduct) {
+                    cart_products_data.push({ foundProduct, ...foundProduct, quantity: 1, });
+                }
+
             }
 
-            let total = 0
-            for (let i = 0; i < cart_products_data.length; i++) {
+            setProducts(cart_products_data);
 
-                total += cart_products_data[i].price;
-            }
-
-
-
-            console.log(total)
-            setProducts(cart_products_data)
+            const newTotalPrice = cart_products_data.reduce((acc, product) => acc + product.price, 0);
+            setTotalPrice(newTotalPrice);
 
         } catch (error) {
             console.log(error)
         } finally {
             setIsLoading(false)
         }
-    }
+    };
 
 
 
     useEffect(() => {
         getAllProductsAndUserCart()
-    }, [])
+    }, []);
 
+    const updateProductQuantity = (productId: any, newQuantity: any) => {
+        const updatedProducts = products.map(product =>
+            product.id === productId ? { ...product, quantity: newQuantity } : product
+        );
+        setProducts(updatedProducts);
+
+        const newTotalPrice = updatedProducts.reduce((acc, product) => acc + (product.price * product.quantity), 0);
+        setTotalPrice(newTotalPrice);
+
+
+
+    };
+
+    const removeProduct = (productId: any) => {
+        const updatedProducts = products.filter(product => product.id !== productId);
+        setProducts(updatedProducts);
+
+        const newTotalPrice = updatedProducts.reduce((acc, product) => acc + (product.price * product.quantity), 0);
+        setTotalPrice(newTotalPrice);
+
+    }
+      
+    
 
 
     return (
@@ -85,9 +104,17 @@ const CartSectionTwo = () => {
                                     </div>
 
                                 </div>
-                                <h3 className="text-sm text-[#0E1422] font-medium">${product.price}</h3>
-                                <Counter />
-                                <img src='/images/remove.png' className="ml-4" alt="photo" />
+                                <div className="flex">
+                                    <div className="flex gap-[32px mr-[16px]">
+                                        <h3 className="text-sm text-[#0E1422] font-medium">${product.price}</h3>
+                                        <Counter count={product.quantity} onQuantityChange={(newQuantity: any) => updateProductQuantity(product.id, newQuantity)} />
+                                    </div>
+                                    <button className="w-[40px] h-[40px] transition hover:scale-110 hover:translate-y-1 duration-500"
+                                        
+                                        onClick={() => removeProduct(product.id)}>
+                                        <img src='/images/remove.png' className="ml-4" alt="Remove item" />
+                                    </button>
+                                </div>
 
 
                             </div>
@@ -107,7 +134,7 @@ const CartSectionTwo = () => {
                     <div className="py-6 mt-4 border-b-[1px]">
                         <div className="flex justify-between">
                             <h4 className="font-medium text-sm text-[#5C5F6A]">Subtotal</h4>
-                            <span className="font-medium text-sm text-[#0E1422]" >$ 90.00</span>
+                            <span className="font-medium text-sm text-[#0E1422]" >${totalPrice.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between mt-3">
                             <h4 className="font-medium text-sm text-[#5C5F6A]">Shipping: </h4>
@@ -120,7 +147,7 @@ const CartSectionTwo = () => {
                     </div>
                     <div className="flex justify-between mt-6">
                         <h4 className="font-medium text-sm text-[#0E1422]">Total</h4>
-                        <span className="font-medium text-sm text-[#0E1422]">$ 100.00</span>
+                        <span className="font-medium text-sm text-[#0E1422]">${(totalPrice + 3).toFixed(2)}</span>
                     </div>
                     <a href='checkout'>
                         <button className="w-[296px] h-[44px] py-3 bg-[#0E1422] text-white rounded-md mt-8 transform transition-transform duration-300 hover:scale-105">Checkout</button>
