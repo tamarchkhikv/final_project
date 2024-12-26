@@ -21,9 +21,9 @@ const Counter =({count, onQuantityChange} :any)=>{
 
     return(
         <div className="w-[107px] h-[40px] border-[1px] border-[#E6E7E8] flex items-center justify-center rounded-[4px]  py-3 gap-[18px] ml-8">
-            <button onClick={minus} className="p-2">-</button>
+            <button onClick={minus} className="p-2 text-xl">-</button>
             <p className="text-sm">{count}</p>
-            <button onClick={plus} className="text-sm p-2">+</button>
+            <button onClick={plus} className="p-2 text-xl">+</button>
 
 
         </div>

@@ -73,8 +73,8 @@ const CartSectionTwo = () => {
         setTotalPrice(newTotalPrice);
 
     }
-      
-    
+
+
 
 
     return (
@@ -85,40 +85,43 @@ const CartSectionTwo = () => {
                     <h3 className="mt-[72px] font-semibold text-base text-[#0E1422]">Your cart</h3>
                     <div className="py-12 space-y-4 ">
                         {isLoading && <p className='text-md text-black'>Loading...</p>}
+                        <div className="space-y-10">
+                            {products.map((product, index) => (
+                                <div className="flex items-center justify-between w-[730px]" key={index}>
+                                    <div className="flex">
+                                        <img src={product.image} className="w-[80px] h-[80px]" alt="photo" />
+                                        <div className="ml-8 mt-2 w-[300px]">
+                                            <h2 className="font-medium text-sm text-[#0E1422]">{product.title}</h2>
+                                            <div className="flex items-center gap-[6px] mt-[6px]">
 
-                        {products.map((product, index) => (
-                            <div className="flex items-center space-x-10" key={index}>
-                                <img src={product.image} className="w-[80px] h-[80px]" alt="photo" />
-                                <div className="ml-8 mt-2 w-[300px]">
-                                    <h2 className="font-medium text-sm text-[#0E1422]">{product.title}</h2>
-                                    <div className="flex items-center gap-[6px] mt-[6px]">
+                                                <span className="font-medium text-[12px] text-[#5C5F6A]">Color:</span>
+                                                <img src="/images/circlegreen.png" className="w-3 h-3" alt="photo" />
+                                                <div className="w-3 h-6 flex items-center">
+                                                    <img src='/images/line.png' alt="photo" />
 
-                                        <span className="font-medium text-[12px] text-[#5C5F6A]">Color:</span>
-                                        <img src="/images/circlegreen.png" className="w-3 h-3" alt="photo" />
-                                        <div className="w-3 h-6 flex items-center">
-                                            <img src='/images/line.png' alt="photo" />
+                                                </div>
+
+                                                <span className="font-medium text-[12px] text-[#5C5F6A]">Size: M</span>
+                                            </div>
 
                                         </div>
+                                    </div>
+                                    <div className="flex">
+                                        <div className="flex items-center">
+                                            <h3 className="text-sm text-[#0E1422] font-medium">${product.price}</h3>
+                                            <Counter count={product.quantity} onQuantityChange={(newQuantity: any) => updateProductQuantity(product.id, newQuantity)} />
+                                        </div>
+                                        <button className="w-[40px] h-[40px] transition hover:scale-110 hover:translate-y-1 duration-500"
 
-                                        <span className="font-medium text-[12px] text-[#5C5F6A]">Size: M</span>
+                                            onClick={() => removeProduct(product.id)}>
+                                            <img src='/images/remove.png' className="ml-4" alt="Remove item" />
+                                        </button>
                                     </div>
 
-                                </div>
-                                <div className="flex">
-                                    <div className="flex gap-[32px mr-[16px]">
-                                        <h3 className="text-sm text-[#0E1422] font-medium">${product.price}</h3>
-                                        <Counter count={product.quantity} onQuantityChange={(newQuantity: any) => updateProductQuantity(product.id, newQuantity)} />
-                                    </div>
-                                    <button className="w-[40px] h-[40px] transition hover:scale-110 hover:translate-y-1 duration-500"
-                                        
-                                        onClick={() => removeProduct(product.id)}>
-                                        <img src='/images/remove.png' className="ml-4" alt="Remove item" />
-                                    </button>
-                                </div>
 
-
-                            </div>
-                        ))}
+                                </div>
+                            ))}
+                        </div>
 
 
 
@@ -161,7 +164,7 @@ const CartSectionTwo = () => {
                 </div>
             </div>
 
-        </div>
+        </div >
 
     )
 }
