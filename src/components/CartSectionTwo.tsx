@@ -128,7 +128,7 @@ const CartSectionTwo = () => {
 
 
                 {
-                    products.length === 0 &&
+                   !isLoading && products.length === 0 &&
                     <div className=" pt-4 pb-[131px]">
                         <div className="w-[273px] h-[181px]  mt-[135px]">
                             <img src='/images/empty-state.svg' className="w-16 h-16 mx-auto" />
